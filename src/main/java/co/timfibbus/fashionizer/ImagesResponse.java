@@ -2,8 +2,11 @@ package co.timfibbus.fashionizer;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class ImagesResponse {
 
+	@JsonProperty("images_results")
 	private List<ImagesResults> results;
 
 	

@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-
 @Service
 public class FashionService {
 	
@@ -28,15 +27,16 @@ public class FashionService {
 		rt = new RestTemplateBuilder().additionalInterceptors(interceptor).build();
 	}
 	
-	
 	public List<ImagesResults> searchFashion(String search) {
 		UriComponentsBuilder b = UriComponentsBuilder.fromHttpUrl("https://serpapi.com/search");
 		b.queryParam("q", search);
 		b.queryParam("gl", "us");
+		b.queryParam("tbm","isch");
 		b.queryParam("hl", "en");
 		b.queryParam("api_key", apiKey);
 		URI url = b.build().toUri();
 		ImagesResponse response = rt.getForObject(url, ImagesResponse.class);
+		System.out.println(url);
 		return response.getResults();
 	}
 

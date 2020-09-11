@@ -8,8 +8,16 @@ public class ImagesResults {
 	private Long id;
 	private String thumbnail;
 	private String link;
+	private String original;
 	
 	
+	
+	public String getOriginal() {
+		return original;
+	}
+	public void setOriginal(String original) {
+		this.original = original;
+	}
 	public Long getId() {
 		return id;
 	}
