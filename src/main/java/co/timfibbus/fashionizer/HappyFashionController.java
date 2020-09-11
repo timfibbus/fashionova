@@ -30,4 +30,13 @@ public class HappyFashionController {
 		return "results";
 	}
 	
+	@RequestMapping("/search-shop")
+	public String searchShoppin(@RequestParam("search") String search, Model model) {
+		
+		List<ShoppingResults> finds = fs.searchShopping(search);
+		model.addAttribute("results", finds);
+		System.out.println(finds);
+		return "results2";
+	}
+	
 }

@@ -14,7 +14,7 @@
 </head>
 <body >
 
-<form action="/search">
+<form action="/search-shop">
 	<h1>Search</h1>
 	<input type ="text" name="search" />
 </form>
