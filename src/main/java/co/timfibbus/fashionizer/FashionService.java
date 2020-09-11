@@ -11,8 +11,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import co.timfibbus.apiproject.Hit;
-import co.timfibbus.apiproject.RecipeResponse;
 
 @Service
 public class FashionService {
@@ -31,16 +29,15 @@ public class FashionService {
 	}
 	
 	
-	public List<Hit> searchRecipe(String search) {
-		UriComponentsBuilder b = UriComponentsBuilder.fromHttpUrl("https://api.edamam.com/search");
+	public List<ImagesResults> searchFashion(String search) {
+		UriComponentsBuilder b = UriComponentsBuilder.fromHttpUrl("https://serpapi.com/search");
 		b.queryParam("q", search);
-		b.queryParam("app_id", apiId);
-		b.queryParam("app_key", apiKey);
+		b.queryParam("gl", "us");
+		b.queryParam("hl", "en");
+		b.queryParam("api_key", apiKey);
 		URI url = b.build().toUri();
-		RecipeResponse response = rt.getForObject(url, RecipeResponse.class);
-		return response.getHits();
+		ImagesResponse response = rt.getForObject(url, ImagesResponse.class);
+		return response.getResults();
 	}
-	
-	
 
 }
