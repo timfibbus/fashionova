@@ -40,12 +40,14 @@ public class FashionService {
 		return response.getResults();
 	}
 	
-	public List<ShoppingResults> searchShopping(String search) {
+	public List<ShoppingResults> searchShopping(String outfit, String search) {
 		UriComponentsBuilder b = UriComponentsBuilder.fromHttpUrl("https://serpapi.com/search");
-		b.queryParam("q", search);
+		b.queryParam("q", outfit + search);
 		b.queryParam("gl", "us");
 		b.queryParam("tbm","shop");
 		b.queryParam("hl", "en");
+		b.queryParam("safe", "active");
+		b.queryParam("no_cache", "true");
 		b.queryParam("api_key", apiKey);
 		URI url = b.build().toUri();
 		ShoppingResponse response = rt.getForObject(url, ShoppingResponse.class);

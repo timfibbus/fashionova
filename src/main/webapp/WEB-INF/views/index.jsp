@@ -14,11 +14,11 @@
 </head>
 <body >
 
-<form action="/search-shop">
+<form action="/search-outfit">
 	<h1>Search</h1>
 	<input type ="text" name="search" />
-</form>
-	<form action="/search-outfit">
+
+	
 	<select name="occasion">
 		<option value="">Outfit Occasion</option>
 		<option value="wedding">Wedding</option>
