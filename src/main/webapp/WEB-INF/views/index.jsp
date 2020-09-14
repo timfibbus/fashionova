@@ -38,5 +38,10 @@
 	
 </form>
 
+<div>
+<!-- This is a temporary link -->
+<a href="/closet"> View Closet Page</a>
+</div>
+
 </body>
 </html>

@@ -48,4 +48,10 @@ public class HappyFashionController {
 		return "results2";
 	}
 	
+	
+	@RequestMapping("/closet")
+	public String showCloset() {
+		
+		return "closet";
+	}
 }
