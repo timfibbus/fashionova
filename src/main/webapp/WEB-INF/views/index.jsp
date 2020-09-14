@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<<<<<<< HEAD
+
 	<form action="/search-shop">
 		<h1>Search</h1>
 		<input type="text" name="search" />
@@ -58,7 +58,7 @@
 		</button>
 	</form>
 
-=======
+
 <form action="/search-outfit">
 	<h1>Search</h1>
 	<input type ="text" name="search" />
@@ -82,7 +82,7 @@
 	<button type="submit">Search by Outfit</button>
 	
 </form>
->>>>>>> cfc1201e212375bfd83714e4b22f2b8c8004d76e
+
 
 </body>
 </html>
