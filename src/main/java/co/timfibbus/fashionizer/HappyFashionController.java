@@ -42,6 +42,8 @@ public class HappyFashionController {
 	*/
 	@RequestMapping("/search-outfit")
 	public String searchOutfit(@RequestParam(required=false) String search, @RequestParam("occasion") String occasion, Model model) {
+		if(search == null) 
+			search = "";
 		List<ShoppingResults> outfits = fs.searchShopping(search, occasion);
 		model.addAttribute("results", outfits);
 		System.out.println(outfits);
