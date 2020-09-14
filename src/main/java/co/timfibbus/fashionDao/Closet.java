@@ -66,7 +66,5 @@ public class Closet {
 	public void setThumbnail(String thumbnail) {
 		this.thumbnail = thumbnail;
 	}
-	
-	
 
 }
