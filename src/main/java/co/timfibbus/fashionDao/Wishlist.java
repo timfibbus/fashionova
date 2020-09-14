@@ -14,19 +14,50 @@ public class Wishlist {
 	private String description;
 	private String title;
 	private String link;
+	private String price;
+	private double rating;
+	private int reviews;
 	private String thumbnail;
 	
 	public Wishlist() {	
 	}
 	
-	public Wishlist(Long id, String type, String description, String title, String link, String thumbnail) {
+	public Wishlist(Long id, String type, String description, String title, String link, String price, double rating,
+			int reviews, String thumbnail) {
 		super();
 		this.id = id;
 		this.type = type;
 		this.description = description;
 		this.title = title;
 		this.link = link;
+		this.price = price;
+		this.rating = rating;
+		this.reviews = reviews;
 		this.thumbnail = thumbnail;
+	}
+
+	public String getPrice() {
+		return price;
+	}
+
+	public void setPrice(String price) {
+		this.price = price;
+	}
+
+	public double getRating() {
+		return rating;
+	}
+
+	public void setRating(double rating) {
+		this.rating = rating;
+	}
+
+	public int getReviews() {
+		return reviews;
+	}
+
+	public void setReviews(int reviews) {
+		this.reviews = reviews;
 	}
 
 	public Long getId() {
@@ -65,8 +96,5 @@ public class Wishlist {
 	public void setThumbnail(String thumbnail) {
 		this.thumbnail = thumbnail;
 	}
-	
-	
-	
 	
 }
