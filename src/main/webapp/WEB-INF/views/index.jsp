@@ -14,6 +14,7 @@
 </head>
 <body>
 
+<<<<<<< HEAD
 	<form action="/search-shop">
 		<h1>Search</h1>
 		<input type="text" name="search" />
@@ -57,6 +58,31 @@
 		</button>
 	</form>
 
+=======
+<form action="/search-outfit">
+	<h1>Search</h1>
+	<input type ="text" name="search" />
+
+	
+	<select name="occasion">
+		<option value="">Outfit Occasion</option>
+		<option value="wedding">Wedding</option>
+		<option value="graduation">Graduation</option>
+		<option value="business casual">Business Casual</option>
+		<option value="barbeque outfit">BBQ</option>
+		<option value="cocktail outfit">Cocktail</option>
+		<option value="black tie event">Black Tie</option>
+		<option value="interview attire">Interview</option>
+		<option value="disco outfit">Club</option>
+		<option value="funeral attire">Funeral</option>
+		<option value="casual attire">Casual</option>
+		<option value="fine dining attire">Fine Dining</option>
+		<option value="semi formal attire">Semi-Formal</option>
+	</select>
+	<button type="submit">Search by Outfit</button>
+	
+</form>
+>>>>>>> cfc1201e212375bfd83714e4b22f2b8c8004d76e
 
 </body>
 </html>

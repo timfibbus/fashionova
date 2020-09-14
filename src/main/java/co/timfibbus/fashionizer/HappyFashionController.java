@@ -21,6 +21,7 @@ public class HappyFashionController {
 		return "index";
 	}
 	
+	/*
 	@RequestMapping("/search")
 	public String searchByTerm(@RequestParam("search") String search, Model model){
 		
@@ -38,12 +39,13 @@ public class HappyFashionController {
 		System.out.println(finds);
 		return "results2";
 	}
+	*/
 	@RequestMapping("/search-outfit")
-	public String searchOutfit(@RequestParam("occasion") String outfit, Model model) {
-		List<ShoppingResults> outfits = fs.searchShopping(outfit);
+	public String searchOutfit(@RequestParam(required=false) String search, @RequestParam("occasion") String occasion, Model model) {
+		List<ShoppingResults> outfits = fs.searchShopping(search, occasion);
 		model.addAttribute("results", outfits);
 		System.out.println(outfits);
-		return "results";
+		return "results2";
 	}
 	
 }
