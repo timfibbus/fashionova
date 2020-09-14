@@ -1,0 +1,55 @@
+
+
+
+
+/*for closet page */
+#carousel {
+    width: 70%;
+    height: 170px;
+    background-color: #ff0000;
+    
+    position: relative;
+    top: 300px;
+    padding: 0.5em;
+    
+    overflow: auto;
+    white-space:nowrap;
+}
+
+#carousel .slide {
+    display: inline-block;
+}
+#carousel2 {
+    width: 70%;
+    height: 170px;
+    background-color: #ff0000;
+    
+    position: relative;
+    top: 300px;
+    padding: 0.5em;
+    
+    overflow: auto;
+    white-space:nowrap;
+}
+#carousel2 .slide {
+    display: inline-block;
+}
+
+#carousel3 {
+
+    width: 24%;
+    height: 670px;
+    background-color: #ff0000;
+    
+     position: absolute;
+    top: 75px;
+    right: 50px;
+    padding: 0.5em;
+   
+     overflow: auto;
+    white-space:nowrap;
+   
+}
+#carousel3 .slide {
+    display: inline-block;
+}
