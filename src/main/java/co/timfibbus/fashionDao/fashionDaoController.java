@@ -27,8 +27,8 @@ public class fashionDaoController {
 	@RequestMapping("/wishlist")
 	public String showWishlist(Model model) {
 		List<Wishlist> wishes = wish.findAll();
-		model.addAttribute("wishes", wishes);
-		return "wishlist";
+		model.addAttribute("results", wishes);
+		return "wish-list";
 	}
 	
 //	@RequestMapping("/wish-list/search")
@@ -42,10 +42,10 @@ public class fashionDaoController {
 //		return wish.findAll();
 //	}
 //
-//	@RequestMapping("/wish-list/add")
-//	public String addtoWishlist() {
-//		return "wish-list";
-//	}
+	@RequestMapping("/wish-list/add")
+	public String addtoWishlist() {
+		return "wish-list";
+	}
 
 }
 	
