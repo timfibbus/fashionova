@@ -49,5 +49,9 @@ public class HappyFashionController {
 		System.out.println(outfits);
 		return "results2";
 	}
+	@RequestMapping("/about")
+	public String aboutUs() {
+		return "about";
+	}
 	
 }

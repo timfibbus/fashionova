@@ -46,8 +46,8 @@ public class FashionService {
 		b.queryParam("gl", "us");
 		b.queryParam("tbm","shop");
 		b.queryParam("hl", "en");
-//		b.queryParam("safe", "active");
-//		b.queryParam("no_cache", "true");
+		b.queryParam("safe", "active");
+		b.queryParam("no_cache", "true");
 		b.queryParam("api_key", apiKey);
 		URI url = b.build().toUri();
 		ShoppingResponse response = rt.getForObject(url, ShoppingResponse.class);
