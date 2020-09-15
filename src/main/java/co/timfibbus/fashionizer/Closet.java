@@ -1,5 +1,6 @@
-package co.timfibbus.fashionDao;
+package co.timfibbus.fashionizer;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,6 +14,7 @@ public class Closet {
 	private String type;
 	private String description;
 	private String title;
+	@Column(length=4000)
 	private String thumbnail;
 	
 	public Closet() {

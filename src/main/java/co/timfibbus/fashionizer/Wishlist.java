@@ -1,5 +1,6 @@
-package co.timfibbus.fashionDao;
+package co.timfibbus.fashionizer;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,15 +16,14 @@ public class Wishlist {
 	private String title;
 	private String link;
 	private String price;
-	private double rating;
-	private int reviews;
+	@Column(length=4000)
 	private String thumbnail;
 	
 	public Wishlist() {	
 	}
 	
-	public Wishlist(Long id, String type, String description, String title, String link, String price, double rating,
-			int reviews, String thumbnail) {
+	public Wishlist(Long id, String type, String description, String title, String link, String price,
+			String thumbnail) {
 		super();
 		this.id = id;
 		this.type = type;
@@ -31,8 +31,6 @@ public class Wishlist {
 		this.title = title;
 		this.link = link;
 		this.price = price;
-		this.rating = rating;
-		this.reviews = reviews;
 		this.thumbnail = thumbnail;
 	}
 
@@ -42,22 +40,6 @@ public class Wishlist {
 
 	public void setPrice(String price) {
 		this.price = price;
-	}
-
-	public double getRating() {
-		return rating;
-	}
-
-	public void setRating(double rating) {
-		this.rating = rating;
-	}
-
-	public int getReviews() {
-		return reviews;
-	}
-
-	public void setReviews(int reviews) {
-		this.reviews = reviews;
 	}
 
 	public Long getId() {
@@ -95,6 +77,13 @@ public class Wishlist {
 	}
 	public void setThumbnail(String thumbnail) {
 		this.thumbnail = thumbnail;
+	}
+
+	@Override
+	public String toString() {
+		return "Wishlist [id=" + id + ", type=" + type + ", description=" + description + ", title=" + title + ", link="
+				+ link + ", price=" + price + ", thumbnail=" + thumbnail
+				+ "]";
 	}
 	
 }

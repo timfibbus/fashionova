@@ -17,7 +17,6 @@ public class ShoppingResults {
 	private List<String> extensions;
 	private String thumbnail;
 	
-	
 	public Long getId() {
 		return id;
 	}
@@ -72,7 +71,5 @@ public class ShoppingResults {
 	public void setThumbnail(String thumbnail) {
 		this.thumbnail = thumbnail;
 	}
-	
-	
 	
 }
