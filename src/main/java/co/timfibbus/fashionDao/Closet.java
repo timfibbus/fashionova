@@ -7,17 +7,18 @@ import javax.persistence.Id;
 
 @Entity
 public class Closet {
-	
-	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String type;
 	private String description;
 	private String title;
 	private String thumbnail;
-	
+
 	public Closet() {
 	}
-	
+
 	public Closet(Long id, String type, String description, String title, String thumbnail) {
 		super();
 		this.id = id;
