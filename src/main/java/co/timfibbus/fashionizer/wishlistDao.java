@@ -1,4 +1,4 @@
-package co.timfibbus.fashionDao;
+package co.timfibbus.fashionizer;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
