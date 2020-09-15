@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -12,14 +13,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class fashionDaoController {
 
 	@Autowired
-	closetDao closet;
+	closetDao closetDao;
 	
 	@Autowired
 	wishlistDao wish;
 	
 	@RequestMapping("/closet")
 	public String showCloset(Model model) {	
-		List<Closet> mine = closet.findAll();
+		List<Closet> mine = closetDao.findAll();
 		model.addAttribute("closet", mine);
 		return "closet";
 	}
@@ -45,6 +46,18 @@ public class fashionDaoController {
 	@RequestMapping("/wish-list/add")
 	public String addtoWishlist() {
 		return "wish-list";
+	}
+	
+	@RequestMapping("/closet/add")
+	public String addToCloset(Closet closet) {
+		closetDao.save(closet);
+		return "closet-form";
+	}
+		
+	@PostMapping("/closet/add")
+	public String submitToCloset(@RequestParam("type") String type, 
+			@RequestParam("description") String description, @RequestParam("title") String title, Closet closet) {
+		return "closet";
 	}
 
 }

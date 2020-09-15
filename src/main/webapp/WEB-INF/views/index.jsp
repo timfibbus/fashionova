@@ -79,7 +79,11 @@
 			<div class="about">
 	<a href="/about">About us</a>
 	</div>
+	
+	<div class="closet-form">
+	<a href="/closet/add">Add to closet</a>
+	</div>
 	</form>
-</p>
+
 </body>
 </html>

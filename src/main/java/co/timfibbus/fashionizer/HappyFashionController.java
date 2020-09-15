@@ -54,4 +54,9 @@ public class HappyFashionController {
 		return "about";
 	}
 	
+	
+	@RequestMapping("/closet-add")
+	public String addToCloset(@RequestParam("type") String type, @RequestParam("description") String description, @RequestParam("title") String title) {
+		return "closet";
+	}
 }
