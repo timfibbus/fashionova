@@ -34,17 +34,6 @@
 						</p>
 
 						<p class="card-text">
-							Rating:
-							<c:out value="${result.rating }" />
-							/5
-						</p>
-
-						<p class="card-text">
-							Reviews:
-							<c:out value="${result.reviews }" />
-						</p>
-
-						<p class="card-text">
 							<c:out value="${result.title }" />
 						</p>
 						<a href="${result.link }" name="link" class="card-link">Buy</a>

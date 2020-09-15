@@ -2,58 +2,110 @@
 	display: block;
 	text-align: center;
 }
+
 .back {
 	background-image: url("/images/puffy-cloud-pattern.jpg");
 	background-repeat: repeat;
 	background-size: auto;
 }
+
 .login {
 	text-align: right;
 }
+
 .about {
 	text-align: center;
 	height: 50px;
 	font-size: 30px;
 }
+
 label {
-  font-size: 48px
+	font-size: 48px
 }
 
 label input[type="checkbox"] {
 	margin-right: 4em;
-  display: none;
+	display: none;
 }
 
 .custom-checkbox {
-  margin-left: 2em;
-  position: relative;
-  cursor: pointer;
+	margin-left: 2em;
+	position: relative;
+	cursor: pointer;
 }
 
 .custom-checkbox .glyphicon {
-  color: gold;
-  position: absolute;
-  top: 0.4em;
-  left: -1.25em;
-  font-size: 0.75em;
+	color: gold;
+	position: absolute;
+	top: 0.4em;
+	left: -1.25em;
+	font-size: 0.75em;
 }
 
 .custom-checkbox .glyphicon-star-empty {
-  color: gray;
+	color: gray;
 }
 
 .custom-checkbox .glyphicon-star {
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;
 }
 
-.custom-checkbox:hover .glyphicon-star{
-  opacity: 0.5;
+.custom-checkbox:hover .glyphicon-star {
+	opacity: 0.5;
 }
 
 .custom-checkbox input[type="checkbox"]:checked ~ .glyphicon-star {
-  opacity: 1;
+	opacity: 1;
 }
+
 .card-columns {
-	text-align:center;
+	text-align: center;
+}
+
+/*for closet page */
+#carousel {
+	width: 70%;
+	height: 170px;
+	background-color: #ff0000;
+	position: relative;
+	top: 300px;
+	padding: 0.5em;
+	overflow: auto;
+	white-space: nowrap;
+}
+
+#carousel .slide {
+	display: inline-block;
+}
+
+#carousel2 {
+	width: 70%;
+	height: 170px;
+	background-color: #ff0000;
+	position: relative;
+	top: 300px;
+	padding: 0.5em;
+	overflow: auto;
+	white-space: nowrap;
+}
+
+#carousel2 .slide {
+	display: inline-block;
+}
+
+#carousel3 {
+	width: 24%;
+	height: 670px;
+	background-color: #ff0000;
+	position: absolute;
+	top: 75px;
+	right: 50px;
+	padding: 0.5em;
+	overflow: auto;
+	white-space: nowrap;
+}
+
+#carousel3 .slide {
+	display: inline-block;
 }
