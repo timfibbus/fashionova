@@ -29,6 +29,7 @@
 		<button type="submit" name="occasion" value="graduation">
 			<img src="images/graduations.jpg" width="300" height="300" />
 		</button>
+		</div>
 		<br>
 		<div class="index">
 			<button type="submit" name="occasion" value="business casual">
@@ -80,7 +81,7 @@
 		<div class="closet-form">
 			<a href="/closet/add">Add to closet</a>
 		</div>
-	</div>
+	
 	</form>
 </body>
 </html>
