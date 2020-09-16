@@ -15,12 +15,18 @@
 	<form action="/search-outfit">
 		<h1>Search</h1>
 		<input type="text" name="search" placeholder="Enter what to search!"/>
+		<br><br>
+		<select name="gender">
+			<option value="">      </option>
+			<option value="mens">Men's</option>
+			<option value="womens">Women's</option>
+		</select>
 	<div class="login">
 		<input type="text" name="login" placeholder="Username" /> <br> <input
 			type="password" name="login" placeholder="Password" /> <br>
 		<button type="submit">Login</button>
 	</div>
-
+	
 	<!--  <form action="/search-outfit">-->
 	<div class="index">
 		<button type="submit" name="occasion" value="wedding">

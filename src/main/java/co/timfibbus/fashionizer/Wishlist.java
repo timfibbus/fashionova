@@ -6,7 +6,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import org.hibernate.annotations.Type;
 
 @Entity
 public class Wishlist {
@@ -18,12 +17,28 @@ public class Wishlist {
 	private String title;
 	private String link;
 	private String price;
-	@Column(length=60000)
+	@Column(length=000)
 	private String thumbnail;
+	private String occasion;
 	
 	public Wishlist() {	
 	}
 	
+	public Wishlist(Long id, String type, String description, String title, String link, String price, String thumbnail,
+			String occasion) {
+		super();
+		this.id = id;
+		this.type = type;
+		this.description = description;
+		this.title = title;
+		this.link = link;
+		this.price = price;
+		this.thumbnail = thumbnail;
+		this.occasion = occasion;
+	}
+
+
+
 	public Wishlist(Long id, String type, String description, String title, String link, String price,
 			String thumbnail) {
 		super();
@@ -86,6 +101,14 @@ public class Wishlist {
 		return "Wishlist [id=" + id + ", type=" + type + ", description=" + description + ", title=" + title + ", link="
 				+ link + ", price=" + price + ", thumbnail=" + thumbnail
 				+ "]";
+	}
+
+	public String getOccasion() {
+		return occasion;
+	}
+
+	public void setOccasion(String occasion) {
+		this.occasion = occasion;
 	}
 	
 }

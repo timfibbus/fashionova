@@ -6,7 +6,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import org.hibernate.annotations.Type;
 
 @Entity
 public class Closet {
@@ -17,10 +16,21 @@ public class Closet {
 	private String type;
 	private String description;
 	private String title;
-	@Column(length=60000)
+	@Column(length=2000)
 	private String thumbnail;
+	private String occasion;
 
 	public Closet() {
+	}
+
+	public Closet(Long id, String type, String description, String title, String thumbnail, String occasion) {
+		super();
+		this.id = id;
+		this.type = type;
+		this.description = description;
+		this.title = title;
+		this.thumbnail = thumbnail;
+		this.occasion = occasion;
 	}
 
 	public Closet(Long id, String type, String description, String title, String thumbnail) {
@@ -70,6 +80,20 @@ public class Closet {
 
 	public void setThumbnail(String thumbnail) {
 		this.thumbnail = thumbnail;
+	}
+
+	@Override
+	public String toString() {
+		return "Closet [id=" + id + ", type=" + type + ", description=" + description + ", title=" + title
+				+ ", thumbnail=" + thumbnail + "]";
+	}
+
+	public String getOccasion() {
+		return occasion;
+	}
+
+	public void setOccasion(String occasion) {
+		this.occasion = occasion;
 	}
 
 }
