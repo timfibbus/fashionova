@@ -7,14 +7,13 @@
 	<link href="style.css" rel="stylesheet" />
 <head>
 <meta charset="ISO-8859-1" content="width=device-width, initial-scale=1">
-<title>Insert title here</title>
+<title>What's up</title>
 </head>
 <body class="back">
 <p class="walk">
-	<form action="/search-shop">
+	<form action="/search-outfit">
 		<h1>Search</h1>
 		<input type="text" name="search" placeholder="Enter what to search!"/>
-	</form>
 	<div class="login">
 	<input type="text" name="login" placeholder="Username"/>
 	<br>
@@ -22,7 +21,7 @@
 	<br>
 	<button type="submit">Login</button>
 	</div>
-	<form action="/search-outfit">
+	<!--  <form action="/search-outfit">-->
 	<div class="index">
 		<button type="submit" name="occasion" value="wedding">
 			<img src="images/wedding.jpg" width="300" height="300" />

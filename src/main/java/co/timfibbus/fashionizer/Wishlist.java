@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.hibernate.annotations.Type;
+
 @Entity
 public class Wishlist {
 	
@@ -16,7 +18,7 @@ public class Wishlist {
 	private String title;
 	private String link;
 	private String price;
-	@Column(length=4000)
+	@Column(length=60000)
 	private String thumbnail;
 	
 	public Wishlist() {	

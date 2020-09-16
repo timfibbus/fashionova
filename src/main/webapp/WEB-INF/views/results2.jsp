@@ -34,7 +34,7 @@
 	<div class="card-columns inline-block">
 		<c:forEach var="result" items="${results }">
 
-			<c:if test="${result.thumbnail.startsWith(h) }">
+			<c:if test="${result.thumbnail.startsWith('h') }">
 				<div class="card" style="width: 18rem;">
 
 					<form action="/wish-list/add">
@@ -72,7 +72,7 @@
 								type="submit" class="card-link" value="add to wishlist" />
 						</div>
 					</form>
-					<form action="/closet/add">
+					<form action="/confirm-closet">
 							<input type="hidden" name="thumbnail" value="${result.thumbnail}" />
 							<input type="hidden" name="title" value="${result.title}" />
 						    <input type="submit" class="card-link" value="add to closet" />
