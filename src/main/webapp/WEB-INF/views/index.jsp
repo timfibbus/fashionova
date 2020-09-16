@@ -29,14 +29,6 @@
 		<button type="submit" name="occasion" value="graduation">
 			<img src="images/graduations.jpg" width="300" height="300" />
 		</button>
-		<div class="index">
-			<button type="submit" name="occasion" value="wedding">
-				<img src="images/wedding.jpg" width="300" height="300" />
-			</button>
-			<button type="submit" name="occasion" value="graduation">
-				<img src="images/graduations.jpg" width="300" height="300" />
-			</button>
-		</div>
 		<br>
 		<div class="index">
 			<button type="submit" name="occasion" value="business casual">
