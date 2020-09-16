@@ -11,7 +11,8 @@ import org.hibernate.annotations.Type;
 @Entity
 public class Closet {
 
-	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String type;
 	private String description;

@@ -88,5 +88,18 @@ public class fashionDaoController {
 		return "confirm";
 	}
 
+	
+//	@RequestMapping("/closet/add")
+//	public String addToCloset(Closet closet) {
+//		closet.save(closet);
+//		return "closet-form";
+//	}
+//		
+//	@PostMapping("/closet/add")
+//	public String submitToCloset(@RequestParam("type") String type, 
+//			@RequestParam("description") String description, @RequestParam("title") String title, Closet closet) {
+//		return "closet";
+//	}
+
 }
 	
