@@ -59,6 +59,11 @@ public class fashionDaoController {
 		//System.out.println(wish.findById(3L).get().getThumbnail());
 		return "confirm";
 	}
+	@RequestMapping("/delete-wishlist")
+	public String deleteWish(@RequestParam("id") Long id) {
+		wish.deleteById(id);
+		return "redirect:/wishlist";
+	}
 	
 	@RequestMapping("/closet/add")
 	public String addToCloset(Model model,@RequestParam("thumbnail") String thumbnail, @RequestParam("title") String title, @RequestParam("type") String type,

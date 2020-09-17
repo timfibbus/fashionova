@@ -37,6 +37,8 @@
 							<c:out value="${result.title }" />
 						</p>
 						<a href="${result.link }" name="link" class="card-link">Buy</a>
+						<br>
+						<a href="/delete-wishlist?id=${result.id}">Delete</a>
 					</div>
 				</form>
 			</div>
