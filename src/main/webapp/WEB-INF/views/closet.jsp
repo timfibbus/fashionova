@@ -21,6 +21,7 @@
  <!-- add for demo -->
 <div>
          <h2>Your closet</h2>
+         <div>
 <form action="/closet/sort">
 			<select name="occasion">
 				<option value="">All</option>
@@ -38,8 +39,8 @@
 				<option value="semi formal attire">Semi-Formal</option>
 			</select> <input type="submit" value="sort"/>
 </form>
-
-<a href="/" class="btn-primary">Return Home</a>
+		<a href="/" class="btn-secondary">Return Home</a>
+		</div>
           
          <div>Create an outfit by moving the items into the box.</div>
     	
