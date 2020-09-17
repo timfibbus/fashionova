@@ -47,7 +47,7 @@
           
          <div>Create an outfit by moving the items into the box.</div>
          
-         </div>
+         
  <div id="dropBox" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)">Build Outfit</div>
       
 
@@ -83,9 +83,8 @@
     </div>
     </div>
 
-</div>
 
-<div>
+
 
 <div id="carousel2">
 <label>Bottoms</label>

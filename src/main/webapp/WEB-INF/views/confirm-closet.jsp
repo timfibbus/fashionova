@@ -12,17 +12,19 @@
 	crossorigin="anonymous">
 <title>Confirm Closet</title>
 </head>
-<body>
+<body class="confirm">
 	<form action="/closet/add">
-	<div>
+	<div class="container" >
 		<input type="hidden" value="${thumbnail }" name="thumbnail"/>
 		<input type="hidden" value="${title }" name="title"/>
 		<h2>Type of clothing (top, bottom, accessory, etc):</h2>
 		<input type="text" name="type" />
 		<h2>Brief description of article:</h2>
 		<textarea name="description"></textarea>
-	</div>
+	     <div>
 		<input type="submit" class="btn-primary" value="confirm"/>
+		</div>
+		</div>
 	</form>
 </body>
 </html>
