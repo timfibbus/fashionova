@@ -78,6 +78,11 @@
 							<input type="hidden" name="title" value="${result.title}" />
 						    <input type="submit" class="card-link" value="add to closet" />
 					</form>
+					<form action="/reverse-search" >
+							
+							<input type="hidden" name="thumbnail" value="${result.thumbnail }" />
+							<input type="submit" class="card-link" value="add to closet" />
+					</form>
 					
 				</div>
 			</c:if>

@@ -15,7 +15,7 @@
 <title>Closet</title>
 <!-- add for demo -->
 <head>    
-     
+    
       <script type="text/javascript">
       function dragStart(ev) {
           ev.dataTransfer.effectAllowed='move';
@@ -42,42 +42,23 @@
 </head>
 <body>
  <!-- add for demo -->
-
+<div>
        
          <h2>Top picks from your closet</h2>
           
          <div>Create an outfit by moving the items into the box.</div>
-         
-         </div>
+
+     	
  <div id="dropBox" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)">Build Outfit</div>
       
 
  <!-- add for demo -->
 <div>
-
 </div>
 
-<div>
-<form action="/closet/sort">
-	<select name="occasion">
-  		<option value="graduation">Graduation</option>
-  		<option value="wedding">Wedding</option>
-  		<option value="business casual">Business Casual</option>
-  		<option value="barbeque outfit">Barbeque Day</option>
-  		<option value="cocktail outfit">Cocktail Party</option>
-  		<option value="black tie event">Black Tie Event</option>
-  		<option value="interview attire">Job Interview</option>
-  		<option value="disco outfit">Discotheque</option>
-  		<option value="funeral attire">Funeral</option>
-  		<option value="casual attire">Casual Attire</option>
-  		<option value="fine dining attire">Fancy Dinner</option>
-  		<option value="semi formal attire">Semi-Formal</option>
-	</select>
-	<input type="hidden" value="occasion" />
-</form>
-</div>
 
-<div>
+
+
 
 
 <div id="carousel">
@@ -86,34 +67,14 @@
 	<c:forEach var="item" items="${closet }">
 	<c:if test="${item.type.contains('top')}">
 	<div class="slide cloth">
-        <img id="${item.id }" src="${item.thumbnail }"/>
+        <img id="${item.id }" src="${item.thumbnail }"
+        draggable="true" 
+        ondragstart="return dragStart(event)"/>
     </div>
     </c:if>
     </c:forEach>
     <div class="slide">
         <img src="http://placehold.it/300x150"/>
-
-    <div class="slide">
-        <img id="1" src="http://placehold.it/300x150" 
-        draggable="true" 
-        ondragstart="return dragStart(event)"/>
-    </div>
-     <div class="slide">
-        <img id="2" src="http://placehold.it/300x150" 
-        draggable="true" 
-        ondragstart="return dragStart(event)"/>
-    </div>
-     <div class="slide">
-        <img id="3" src="http://placehold.it/300x150" 
-        draggable="true" 
-        ondragstart="return dragStart(event)"/>
-    </div>
-     <div class="slide">
-        <img id="4" src="http://placehold.it/300x150" 
-        draggable="true" 
-        ondragstart="return dragStart(event)"/>
-
-    </div>
     </div>
 
 </div>
@@ -126,7 +87,9 @@
 	<c:forEach var="item" items="${closet }">
 	<c:if test="${item.type.contains('bottom')}">
 	<div class="slide cloth">
-        <img id="${item.id }" src="${item.thumbnail }"/>
+        <img id="${item.id }" src="${item.thumbnail }"
+        draggable="true" 
+        ondragstart="return dragStart(event)"/>
     </div>
     </c:if>
     </c:forEach>
@@ -134,27 +97,6 @@
         <img src="http://placehold.it/300x150"/>
     </div>
 </div>
-
-     <div class="slide">
-        <img id="c1" src="http://placehold.it/300x150" 
-        draggable="true" 
-        ondragstart="return dragStart(event)"/>
-    </div>
-     <div class="slide">
-        <img id="1" src="http://placehold.it/300x150" 
-        draggable="true" 
-        ondragstart="return dragStart(event)"/>
-    </div>
-     <div class="slide">
-        <img id="1" src="http://placehold.it/300x150" 
-        draggable="true" 
-        ondragstart="return dragStart(event)"/>
-    </div>
-     <div class="slide">
-        <img id="1" src="http://placehold.it/300x150" 
-        draggable="true" 
-        ondragstart="return dragStart(event)"/>
-    </div>
 
 </div> 
  
@@ -177,6 +119,24 @@
  
 </div>
 </div>
-
+<div>
+<form action="/closet/sort">
+			<select name="occasion">
+				<option value="graduation">Graduation</option>
+				<option value="wedding">Wedding</option>
+				<option value="business casual">Business Casual</option>
+				<option value="barbeque outfit">Barbeque Day</option>
+				<option value="cocktail outfit">Cocktail Party</option>
+				<option value="black tie event">Black Tie Event</option>
+				<option value="interview attire">Job Interview</option>
+				<option value="disco outfit">Discotheque</option>
+				<option value="funeral attire">Funeral</option>
+				<option value="casual attire">Casual Attire</option>
+				<option value="fine dining attire">Fancy Dinner</option>
+				<option value="semi formal attire">Semi-Formal</option>
+			</select> <input type="submit" value="sort"/>
+</form>
+</div>
+</div>
 </body>
 </html>

@@ -21,14 +21,24 @@ public class HappyFashionController {
 	}
 
 	@RequestMapping("/search-outfit")
-	public String searchOutfit(@RequestParam(required = false) String search, @RequestParam("occasion") String occasion,
-			Model model) { 
+	public String searchOutfit(@RequestParam(required = false) String gender, @RequestParam(required = false) String search,
+			@RequestParam("occasion") String occasion, Model model) { 
 		if (search == null)
 			search = "";
-		List<ShoppingResults> outfits = fs.searchShopping(search, occasion);
+		if (gender == null)
+			gender = "";
+		List<ShoppingResults> outfits = fs.searchShopping(search, occasion, gender);
 		model.addAttribute("results", outfits);
 		model.addAttribute("occasion", occasion);
 		System.out.println(outfits);
+		return "results2";
+	}
+	
+	@RequestMapping("/reverse-search")
+	public String searchOutfit(@RequestParam(required = false) String thumbnail, Model model) {
+		
+		List<ShoppingResults> outfits = fs.reverseSearch(thumbnail);
+		model.addAttribute("results", outfits);
 		return "results2";
 	}
 

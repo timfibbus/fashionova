@@ -54,5 +54,20 @@ public class FashionService {
 		System.out.println(url);
 		return response.getShopResults();
 	}
+	
+	public List<ShoppingResults> reverseSearch(String thumbnail){
+		UriComponentsBuilder b = UriComponentsBuilder.fromHttpUrl("https://serpapi.com/search?engine=google_reverse_image");
+		b.queryParam("image_url", thumbnail);
+		b.queryParam("gl", "us");
+		b.queryParam("tbm","shop");
+		b.queryParam("hl", "en");
+		b.queryParam("safe", "active");
+		b.queryParam("no_cache", "true");
+		b.queryParam("api_key", apiKey);
+		URI url = b.build().toUri();
+		ShoppingResponse response = rt.getForObject(url, ShoppingResponse.class);
+		System.out.println(url);
+		return response.getShopResults();
+	}
 
 }

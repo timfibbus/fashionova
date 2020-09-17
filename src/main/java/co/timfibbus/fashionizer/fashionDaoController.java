@@ -29,9 +29,10 @@ public class fashionDaoController {
 	}
 	
 	@RequestMapping("/closet/sort")
-	public String sortClosetByOccasion(Model model, @RequestParam("sort") String occasion) {
-		List<Closet> these = closet.findByOccasion(occasion);
-		model.addAttribute("these", these);
+	public String sortClosetByOccasion(Model model, @RequestParam("occasion") String occasion) {
+		List<Closet> these = closet.findAllByOccasion(occasion);
+		model.addAttribute("closet", these);
+		System.out.println(these);
 		return "closet";
 	}
 	
