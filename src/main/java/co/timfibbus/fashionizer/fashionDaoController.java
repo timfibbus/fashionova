@@ -30,13 +30,15 @@ public class fashionDaoController {
 	
 	@RequestMapping("/closet/sort")
 	public String sortClosetByOccasion(Model model, @RequestParam("occasion") String occasion) {
+		if (occasion == "") {
+			List<Closet> these = closet.findAll();
+			model.addAttribute("closet", these);
+			return "closet";
+		} else {
 		List<Closet> these = closet.findAllByOccasion(occasion);
 		model.addAttribute("closet", these);
-		System.out.println(these);
-		for (Closet i : these) {
-			System.out.println(i.toString());
-			}
 		return "closet";
+		}	
 	}
 	
 	@RequestMapping("/wishlist")
@@ -73,6 +75,11 @@ public class fashionDaoController {
 		System.out.println(wishy.toString());
 		//System.out.println(wish.findById(3L).get().getThumbnail());
 		return "confirm";
+	}
+	@RequestMapping("/delete-wishlist")
+	public String deleteWish(@RequestParam("id") Long id) {
+		wish.deleteById(id);
+		return "redirect:/wishlist";
 	}
 	
 	@RequestMapping("/closet/add")

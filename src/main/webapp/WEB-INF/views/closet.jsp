@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
@@ -23,6 +23,7 @@
          <h2>Your closet</h2>
 <form action="/closet/sort">
 			<select name="occasion">
+				<option value="">All</option>
 				<option value="graduation">Graduation</option>
 				<option value="wedding">Wedding</option>
 				<option value="business casual">Business Casual</option>
@@ -39,8 +40,6 @@
 </form>
 
 <a href="/" class="btn-primary">Return Home</a>
-
-
           
          <div>Create an outfit by moving the items into the box.</div>
     	
