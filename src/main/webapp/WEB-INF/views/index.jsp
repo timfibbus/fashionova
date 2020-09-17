@@ -6,29 +6,33 @@
 <html>
 <link href="style.css" rel="stylesheet" />
 <head>
+
+
 <meta charset="ISO-8859-1" content="width=device-width, initial-scale=1">
 <title>What's up</title>
 </head>
+
+<h1>Closet Clue</h1>
 <body class="back">
 
-<p class="walk">
+	<p class="walk">
 	<form action="/search-outfit">
 		<h1>Search</h1>
-		<input type="text" name="search" placeholder="Enter what to search!"/>
-	<div class="login">
-		<input type="text" name="login" placeholder="Username" /> <br> <input
-			type="password" name="login" placeholder="Password" /> <br>
-		<button type="submit">Login</button>
-	</div>
+		<input type="text" name="search" placeholder="Enter what to search!" />
+		<div class="login">
+			<input type="text" name="login" placeholder="Username" /> <br>
+			<input type="password" name="login" placeholder="Password" /> <br>
+			<button type="submit">Login</button>
+		</div>
 
-	<!--  <form action="/search-outfit">-->
-	<div class="index">
-		<button type="submit" name="occasion" value="wedding">
-			<img src="images/wedding.jpg" width="300" height="300" />
-		</button>
-		<button type="submit" name="occasion" value="graduation">
-			<img src="images/graduations.jpg" width="300" height="300" />
-		</button>
+		<!--  <form action="/search-outfit">-->
+		<div class="index">
+			<button type="submit" name="occasion" value="wedding">
+				<img src="images/wedding.jpg" width="300" height="300" />
+			</button>
+			<button type="submit" name="occasion" value="graduation">
+				<img src="images/graduations.jpg" width="300" height="300" />
+			</button>
 
 		</div>
 
@@ -80,11 +84,14 @@
 		<div class="about">
 			<a href="/about">About us</a>
 		</div>
-		<div class="closet-form">
-			<a href="/closet/add">Add to closet</a>
+
+<div class="wishlist">
+			<a href="/wishlist">View your wishlist</a>
 		</div>
 
-	</div>
+<div class="closet">
+			<a href="/closet">View your closet</a>
+		</div>
 
 	</form>
 </body>
