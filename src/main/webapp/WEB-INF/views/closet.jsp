@@ -13,14 +13,48 @@
 <link rel="stylesheet" href="closet.css">
 <meta charset="UTF-8">
 <title>Closet</title>
+<!-- add for demo -->
+<head>    
+     
+      <script type="text/javascript">
+      function dragStart(ev) {
+          ev.dataTransfer.effectAllowed='move';
+          ev.dataTransfer.setData("Text", ev.target.getAttribute('id'));
+          ev.dataTransfer.setDragImage(ev.target,0,0);
+          return true;
+       }
+       function dragEnter(ev) {
+          event.preventDefault();
+          return true;
+       }
+       function dragOver(ev) {
+          return false;
+       }
+       function dragDrop(ev) {
+          var src = ev.dataTransfer.getData("Text");
+          ev.target.appendChild(document.getElementById(src));
+          ev.stopPropagation();
+          return false;
+       }
+      </script>
+      
+   <!-- add for demo -->
 </head>
 <body>
+ <!-- add for demo -->
 
+       
+         <h2>Top picks from your closet</h2>
+          
+         <div>Create an outfit by moving the items into the box.</div>
+         
+         </div>
+ <div id="dropBox" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)">Build Outfit</div>
+      
+
+ <!-- add for demo -->
 <div>
-<h3> Top picks from your closet</h3>
-<img src="http://placehold.it/300x150"/>
-<img src="http://placehold.it/300x150"/>
-<img src="http://placehold.it/300x150"/>
+
 </div>
 
 <div>
@@ -48,15 +82,37 @@
 
 <div id="carousel">
 <label>Tops</label>
+
 	<c:forEach var="item" items="${closet }">
 	<c:if test="${item.type.contains('top')}">
 	<div class="slide cloth">
-        <img src="${item.thumbnail }"/>
+        <img id="${item.id }" src="${item.thumbnail }"/>
     </div>
     </c:if>
     </c:forEach>
     <div class="slide">
         <img src="http://placehold.it/300x150"/>
+
+    <div class="slide">
+        <img id="1" src="http://placehold.it/300x150" 
+        draggable="true" 
+        ondragstart="return dragStart(event)"/>
+    </div>
+     <div class="slide">
+        <img id="2" src="http://placehold.it/300x150" 
+        draggable="true" 
+        ondragstart="return dragStart(event)"/>
+    </div>
+     <div class="slide">
+        <img id="3" src="http://placehold.it/300x150" 
+        draggable="true" 
+        ondragstart="return dragStart(event)"/>
+    </div>
+     <div class="slide">
+        <img id="4" src="http://placehold.it/300x150" 
+        draggable="true" 
+        ondragstart="return dragStart(event)"/>
+
     </div>
     </div>
 
@@ -66,10 +122,11 @@
 
 <div id="carousel2">
 <label>Bottoms</label>
+
 	<c:forEach var="item" items="${closet }">
 	<c:if test="${item.type.contains('bottom')}">
 	<div class="slide cloth">
-        <img src="${item.thumbnail }"/>
+        <img id="${item.id }" src="${item.thumbnail }"/>
     </div>
     </c:if>
     </c:forEach>
@@ -77,6 +134,28 @@
         <img src="http://placehold.it/300x150"/>
     </div>
 </div>
+
+     <div class="slide">
+        <img id="c1" src="http://placehold.it/300x150" 
+        draggable="true" 
+        ondragstart="return dragStart(event)"/>
+    </div>
+     <div class="slide">
+        <img id="1" src="http://placehold.it/300x150" 
+        draggable="true" 
+        ondragstart="return dragStart(event)"/>
+    </div>
+     <div class="slide">
+        <img id="1" src="http://placehold.it/300x150" 
+        draggable="true" 
+        ondragstart="return dragStart(event)"/>
+    </div>
+     <div class="slide">
+        <img id="1" src="http://placehold.it/300x150" 
+        draggable="true" 
+        ondragstart="return dragStart(event)"/>
+    </div>
+
 </div> 
  
 <div>
@@ -86,7 +165,9 @@
 	<c:forEach var="item" items="${closet }">
 	<c:if test="${item.type.contains('accessory')}">
 	<div class="slide3 cloth">
-        <img src="${item.thumbnail }"/>
+        <img id="${item.id }" src="${item.thumbnail }"
+        draggable="true" 
+        ondragstart="return dragStart(event)"/>
     </div>
     </c:if>
 	</c:forEach>
