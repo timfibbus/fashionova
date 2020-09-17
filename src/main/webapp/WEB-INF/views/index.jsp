@@ -11,24 +11,30 @@
 </head>
 <body class="back">
 
-<p class="walk">
+	<p class="walk">
 	<form action="/search-outfit">
 		<h1>Search</h1>
-		<input type="text" name="search" placeholder="Enter what to search!"/>
-	<div class="login">
-		<input type="text" name="login" placeholder="Username" /> <br> <input
-			type="password" name="login" placeholder="Password" /> <br>
-		<button type="submit">Login</button>
-	</div>
+		<input type="text" name="search" placeholder="Enter what to search!" />
+		<br>
+		<br> <select name="gender">
+			<option value=""></option>
+			<option value="mens">Men's</option>
+			<option value="womens">Women's</option>
+		</select>
+		<div class="login">
+			<input type="text" name="login" placeholder="Username" /> <br>
+			<input type="password" name="login" placeholder="Password" /> <br>
+			<button type="submit">Login</button>
+		</div>
 
-	<!--  <form action="/search-outfit">-->
-	<div class="index">
-		<button type="submit" name="occasion" value="wedding">
-			<img src="images/wedding.jpg" width="300" height="300" />
-		</button>
-		<button type="submit" name="occasion" value="graduation">
-			<img src="images/graduations.jpg" width="300" height="300" />
-		</button>
+		<!--  <form action="/search-outfit">-->
+		<div class="index">
+			<button type="submit" name="occasion" value="wedding">
+				<img src="images/wedding.jpg" width="300" height="300" />
+			</button>
+			<button type="submit" name="occasion" value="graduation">
+				<img src="images/graduations.jpg" width="300" height="300" />
+			</button>
 
 		</div>
 
@@ -84,7 +90,7 @@
 			<a href="/closet/add">Add to closet</a>
 		</div>
 
-	</div>
+		</div>
 
 	</form>
 </body>

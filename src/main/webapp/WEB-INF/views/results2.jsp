@@ -38,7 +38,7 @@
 				<div class="card" style="width: 18rem;">
 
 					<form action="/wish-list/add">
-
+					<input type="hidden" value="${occasion }" name="occasion"/>
 						<a class="custom-checkbox"> <i
 							class="glyphicon glyphicon-star-empty"></i> <i
 							class="glyphicon glyphicon-star"></i></a> <img
@@ -73,9 +73,15 @@
 						</div>
 					</form>
 					<form action="/confirm-closet">
+							<input type="hidden" name="occasion" value="${occasion }"/>
 							<input type="hidden" name="thumbnail" value="${result.thumbnail}" />
 							<input type="hidden" name="title" value="${result.title}" />
 						    <input type="submit" class="card-link" value="add to closet" />
+					</form>
+					<form action="/reverse-search" >
+							
+							<input type="hidden" name="thumbnail" value="${result.thumbnail }" />
+							<input type="submit" class="card-link" value="add to closet" />
 					</form>
 					
 				</div>

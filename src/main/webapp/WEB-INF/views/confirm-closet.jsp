@@ -14,7 +14,12 @@
 </head>
 <body class="confirm">
 	<form action="/closet/add">
+
 	<div class="container" >
+
+	<div>
+		<input type="hidden" value="${occasion }" name="occasion" />
+
 		<input type="hidden" value="${thumbnail }" name="thumbnail"/>
 		<input type="hidden" value="${title }" name="title"/>
 		<h2>Type of clothing (top, bottom, accessory, etc):</h2>
