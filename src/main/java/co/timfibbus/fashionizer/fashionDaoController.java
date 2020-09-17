@@ -33,6 +33,9 @@ public class fashionDaoController {
 		List<Closet> these = closet.findAllByOccasion(occasion);
 		model.addAttribute("closet", these);
 		System.out.println(these);
+		for (Closet i : these) {
+			System.out.println(i.toString());
+			}
 		return "closet";
 	}
 	
