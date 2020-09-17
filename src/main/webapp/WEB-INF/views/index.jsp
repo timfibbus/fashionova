@@ -4,6 +4,10 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+	crossorigin="anonymous">
 <link href="style.css" rel="stylesheet" />
 <head>
 
@@ -12,7 +16,7 @@
 <title>What's up</title>
 </head>
 
-<h1>Closet Clue</h1>
+<h1 class="center-text"><center>Closet Clue</center></h1>
 <body class="back">
 
 	<p class="walk">
@@ -26,7 +30,8 @@
 			<option value="mens">Men's</option>
 			<option value="womens">Women's</option>
 		</select>
-
+		<input type="submit" class="btn-primary" value="search"/>
+		
 		<div class="login">
 			<input type="text" name="login" placeholder="Username" /> <br>
 			<input type="password" name="login" placeholder="Password" /> <br>

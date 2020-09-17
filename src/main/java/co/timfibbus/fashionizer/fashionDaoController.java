@@ -70,9 +70,10 @@ public class fashionDaoController {
 		wishy.setPrice(price);
 		wishy.setLink(link);
 		wishy.setOccasion(occasion);
+		System.out.println(wishy.toString());
 		wish.save(wishy);
 		model.addAttribute("title", title);
-		System.out.println(wishy.toString());
+		
 		//System.out.println(wish.findById(3L).get().getThumbnail());
 		return "confirm";
 	}
