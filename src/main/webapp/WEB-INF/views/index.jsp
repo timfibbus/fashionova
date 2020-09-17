@@ -102,7 +102,6 @@
 			<a href="/wishlist">View your wishlist</a>
 		</div>
 
-
 <div class="closet">
 			<a href="/closet">View your closet</a>
 

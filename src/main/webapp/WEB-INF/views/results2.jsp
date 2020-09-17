@@ -67,9 +67,10 @@
 								<c:out value="${result.title }" />
 							</p>
 							<input type="hidden" name="title" value="${result.title}" /> <a
-								href="${result.link }" name="link" class="card-link">Buy</a> <input
-								type="hidden" name="link" value="${result.link}" /> <input
-								type="submit" class="card-link" value="add to wishlist" />
+								href="${result.link }" name="link" class="card-link">Buy</a>
+								 <input
+								type="hidden" name="link" value="${result.link}" />
+								 <input type="submit" class="card-link" value="add to wishlist" />
 						</div>
 					</form>
 					<form action="/confirm-closet">

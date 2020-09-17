@@ -100,7 +100,7 @@ public class fashionDaoController {
 	
 	@RequestMapping("/confirm-closet")
 	public String confirmClosetAdd(Model model, @RequestParam("thumbnail") String thumbnail, @RequestParam("title") String title,
-			@RequestParam("occasion") String occasion) {
+			@RequestParam(required=false) String occasion) {
 		model.addAttribute("thumbnail", thumbnail);
 		model.addAttribute("title", title);
 		model.addAttribute("occasion", occasion);
@@ -108,9 +108,11 @@ public class fashionDaoController {
 	}
 	
 	@RequestMapping("/confirm")
-	public String confirm(@RequestParam("title") String title, Model model) {
+	public String confirm(@RequestParam("title") String title, @RequestParam("thumbnail") String thumbnail, Model model) {
 		String wish = title;
+		String thumb = thumbnail;
 		model.addAttribute("title", wish);
+		model.addAttribute("thumbnail", thumb);
 		return "confirm";
 	}
 

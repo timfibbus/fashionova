@@ -25,8 +25,9 @@
 		<c:forEach var="result" items="${results }">
 
 			<div class="card" style="width: 18rem;">
-				<form>
+				<form action="/confirm-closet">
 					<img name="image" src="${result.thumbnail }" class="card-img-top">
+					<input type="hidden" name="thumbnail" value="${result.thumbnail }"/>
 					<div class="card-body">
 						<p class="card-text">
 							Price:
@@ -35,14 +36,19 @@
 
 						<p class="card-text">
 							<c:out value="${result.title }" />
+							<input type="hidden" name="title" value="${result.title }"/>
 						</p>
 						<a href="${result.link }" name="link" class="card-link">Buy</a>
 						<br>
 						<a href="/delete-wishlist?id=${result.id}">Delete</a>
+						<br>
+						
+						<input type="submit" value="Add to closet">
+						
 					</div>
 				</form>
 			</div>
-		</c:forEach>
+		</c:forEach>	
 	</div>
 <body>
 
