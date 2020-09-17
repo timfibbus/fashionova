@@ -17,6 +17,7 @@
 	<div>
 		<p>You added:</p>
 		<c:out value="${title }" />
+		<img name="image" src="${thumbnail }" class="card-img-top"/>
 		<br><br>
 		<a class="btn-warning" href="/wishlist">View Wishlist</a>
 		<a class="btn-secondary" href="/">Return to homepage</a>
