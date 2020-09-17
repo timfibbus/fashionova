@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -55,20 +56,29 @@ public class fashionDaoController {
 		wish.save(wishy);
 		model.addAttribute("title", title);
 		System.out.println(wishy.toString());
-		System.out.println(wish.findById(3L).get().getThumbnail());
+		//System.out.println(wish.findById(3L).get().getThumbnail());
 		return "confirm";
 	}
 	
 	@RequestMapping("/closet/add")
-	public String addToCloset(Model model,@RequestParam("thumbnail") String thumbnail, @RequestParam("title") String title){
+	public String addToCloset(Model model,@RequestParam("thumbnail") String thumbnail, @RequestParam("title") String title, @RequestParam("type") String type,
+			@RequestParam("description") String description){
 		Closet close = new Closet();
 		close.setThumbnail(thumbnail);
 		close.setTitle(title);
+		close.setType(type);
+		close.setDescription(description);
 		closet.save(close);
 		model.addAttribute("title", title);
 		System.out.println(close.toString());
-		System.out.println(wish.findById(3L).get().getThumbnail());
-		return "confirm";
+		return "redirect:/closet";
+	}
+	
+	@RequestMapping("/confirm-closet")
+	public String confirmClosetAdd(Model model, @RequestParam("thumbnail") String thumbnail, @RequestParam("title") String title) {
+		model.addAttribute("thumbnail", thumbnail);
+		model.addAttribute("title", title);
+		return "confirm-closet";
 	}
 	
 	@RequestMapping("/confirm")
@@ -77,6 +87,7 @@ public class fashionDaoController {
 		model.addAttribute("title", wish);
 		return "confirm";
 	}
+
 	
 //	@RequestMapping("/closet/add")
 //	public String addToCloset(Closet closet) {
@@ -89,5 +100,6 @@ public class fashionDaoController {
 //			@RequestParam("description") String description, @RequestParam("title") String title, Closet closet) {
 //		return "closet";
 //	}
+
 }
 	

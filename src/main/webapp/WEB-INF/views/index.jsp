@@ -7,28 +7,28 @@
 <link href="style.css" rel="stylesheet" />
 <head>
 <meta charset="ISO-8859-1" content="width=device-width, initial-scale=1">
-<title>Insert title here</title>
+<title>What's up</title>
 </head>
 <body class="back">
-	<p class="walk">
-	<form action="/search-shop">
+
+<p class="walk">
+	<form action="/search-outfit">
 		<h1>Search</h1>
-		<input type="text" name="search" placeholder="Enter what to search!" />
-	</form>
+		<input type="text" name="search" placeholder="Enter what to search!"/>
 	<div class="login">
 		<input type="text" name="login" placeholder="Username" /> <br> <input
 			type="password" name="login" placeholder="Password" /> <br>
 		<button type="submit">Login</button>
 	</div>
-	<form action="/search-outfit">
-		<div class="index">
-			<button type="submit" name="occasion" value="wedding">
-				<img src="images/wedding.jpg" width="300" height="300" />
-			</button>
-			<button type="submit" name="occasion" value="graduation">
-				<img src="images/graduations.jpg" width="300" height="300" />
-			</button>
-		</div>
+
+	<!--  <form action="/search-outfit">-->
+	<div class="index">
+		<button type="submit" name="occasion" value="wedding">
+			<img src="images/wedding.jpg" width="300" height="300" />
+		</button>
+		<button type="submit" name="occasion" value="graduation">
+			<img src="images/graduations.jpg" width="300" height="300" />
+		</button>
 		<br>
 		<div class="index">
 			<button type="submit" name="occasion" value="business casual">
@@ -80,6 +80,7 @@
 		<div class="closet-form">
 			<a href="/closet/add">Add to closet</a>
 		</div>
+	</div>
 	</form>
 </body>
 </html>
