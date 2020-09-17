@@ -39,6 +39,7 @@
   		<option value="fine dining attire">Fancy Dinner</option>
   		<option value="semi formal attire">Semi-Formal</option>
 	</select>
+	<input type="hidden" value="occasion" />
 </form>
 </div>
 
