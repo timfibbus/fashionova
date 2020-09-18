@@ -15,8 +15,10 @@
 <meta charset="ISO-8859-1" content="width=device-width, initial-scale=1">
 <title>What's up</title>
 </head>
+<div>
+<h1 class="center-text card"><center>Closet Clue</center></h1>
 
-<h1 class="center-text"><center>Closet Clue</center></h1>
+</div>
 <body class="back">
 
 	<p class="walk">
@@ -39,6 +41,12 @@
 		</div>
 
 		<!--  <form action="/search-outfit">-->
+		<div class="card">
+		
+		<p class="card-text center-text container">Welcome to Closet Clue<br>
+		We're here to help </p>
+		
+		</div>
 		<div class="index">
 			<button type="submit" name="occasion" value="wedding">
 				<img src="images/wedding.jpg" width="300" height="300" />

@@ -48,5 +48,4 @@ public class HappyFashionController {
 	public String aboutUs() {
 		return "about";
 	}
-
 }

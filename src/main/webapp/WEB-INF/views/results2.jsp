@@ -3,7 +3,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
-
 <html>
 <link
 	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
@@ -33,10 +32,8 @@
 	</div>
 	<div class="card-columns inline-block">
 		<c:forEach var="result" items="${results }">
-
 			<c:if test="${result.thumbnail.startsWith('h') }">
 				<div class="card" style="width: 18rem;">
-
 					<form action="/wish-list/add">
 					<input type="hidden" value="${occasion }" name="occasion"/>
 						<a class="custom-checkbox"> <i
@@ -80,15 +77,12 @@
 						    <input type="submit" class="card-link" value="add to closet" />
 					</form>
 					<form action="/reverse-search" >
-							
 							<input type="hidden" name="thumbnail" value="${result.thumbnail }" />
-							<input type="submit" class="card-link" value="add to closet" />
+							<input type="submit" class="card-link" value="search for similar items" />
 					</form>
-					
 				</div>
 			</c:if>
 		</c:forEach>
 	</div>
-
 </body>
 </html>

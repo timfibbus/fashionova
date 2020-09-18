@@ -51,11 +51,11 @@
 </div>
 
 <div id="carousel">
-<label>Tops</label>
+<label class="carousel-overlay">Tops</label>
 
 	<c:forEach var="item" items="${closet }">
 	<c:if test="${item.type.contains('top')}">
-	<div class="slide cloth">
+	<div class="container card cloth1 slide">
         <img id="${item.id }" src="${item.thumbnail }"
         draggable="true" 
         ondragstart="return dragStart(event)"/>
@@ -71,11 +71,28 @@
 
 	<c:forEach var="item" items="${closet }">
 	<c:if test="${item.type.contains('bottom')}">
-	<div class="slide cloth">
+	<div id="myImg" class="container card cloth1 slide ">
         <img id="${item.id }" src="${item.thumbnail }"
-        draggable="true" 
+        draggable="true"
         ondragstart="return dragStart(event)"/>
+        <div> <button class="btn-primary open-button" onclick="openForm()">Open Form</button>  
+            <div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+        </div>
     </div>
+
     </c:if>
     </c:forEach>
 </div>
@@ -86,7 +103,21 @@
 <label>Accessories</label>
 	<c:forEach var="item" items="${closet }">
 	<c:if test="${item.type.contains('accessory')}">
-	<div class="slide3 cloth">
+	<div class="container card slide3 cloth3">
+        <img id="${item.id }" src="${item.thumbnail }"
+        draggable="true" 
+        ondragstart="return dragStart(event)"/>
+    </div>
+    </c:if>
+	</c:forEach>
+</div>
+</div>
+<div>
+<div id="carousel4">
+<label>Shoes</label>
+	<c:forEach var="item" items="${closet }">
+	<c:if test="${item.type.contains('accessory')}">
+	<div class="container card slide4 cloth3">
         <img id="${item.id }" src="${item.thumbnail }"
         draggable="true" 
         ondragstart="return dragStart(event)"/>
@@ -99,7 +130,7 @@
 
 </div>
 
-      <script type="text/javascript">
+<script type="text/javascript">
       function dragStart(ev) {
           ev.dataTransfer.effectAllowed='move';
           ev.dataTransfer.setData("Text", ev.target.getAttribute('id'));
@@ -119,6 +150,14 @@
           ev.stopPropagation();
           return false;
        }
-      </script>
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
 </body>
 </html>
