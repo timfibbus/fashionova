@@ -18,7 +18,7 @@
 		<div class="card-body">
 			<h5 class="card-title">Your Wish List!</h5>
 			<p class="card-text"></p>
-			<a href="/" class="btn btn-primary">Return to Search</a>
+			<a href="/index" class="btn btn-primary">Return to Search</a>
 		</div>
 	</div>
 	<div class="card-columns inline-block">
