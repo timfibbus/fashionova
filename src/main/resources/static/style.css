@@ -103,15 +103,30 @@ label input[type="checkbox"] {
 }
 
 #carousel3 {
-	width: 24%;
+	width: 320px;
 	height: 90%;
 	background-color: #ff0000;
 	position: absolute;
 	top: 75px;
-	right: 50px;
+	right: 10px;
 	padding: 0.5em;
 	overflow: auto;
 	white-space: nowrap;
+}
+#carousel4 {
+	width: 320px;
+	height: 41%;
+	background-color: #ff0000;
+	position: absolute;
+	top: 632px;
+	right: 10px;
+	padding: 0.5em;
+	overflow: auto;
+	white-space: nowrap;
+}
+
+#carousel4 .slide {
+	display: inline-block;
 }
 
 #carousel3 .slide {
@@ -123,7 +138,8 @@ label input[type="checkbox"] {
 	margin:10px;
 	-moz-user-select:none;
 	background-color: #FF6699; 
-	width:50%; 
+	width:70%; 
 	height:400px; 
 	left:100px;
 	}
+	

@@ -43,5 +43,10 @@ background-color: white; font-size: 35px;
 <center><a href="/index"><button class="big-btn">Shop & Browse</button></a></center>
 <br>
 <center><a href="/closet"><button class="big-btn">Closet</button></a></center>
+
+
+	
+<a href="/">Return home</a>
+
 </body>
 </html>

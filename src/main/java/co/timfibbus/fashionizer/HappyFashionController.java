@@ -22,11 +22,13 @@ public class HappyFashionController {
 
 	@RequestMapping("/search-outfit")
 	public String searchOutfit(@RequestParam(required = false) String gender, @RequestParam(required = false) String search,
-			@RequestParam("occasion") String occasion, Model model) { 
+			@RequestParam(required = false) String occasion, Model model) { 
 		if (search == null)
 			search = "";
 		if (gender == null)
 			gender = "";
+		if (occasion == null)
+			occasion = "";
 		List<ShoppingResults> outfits = fs.searchShopping(search, occasion, gender);
 		model.addAttribute("results", outfits);
 		model.addAttribute("occasion", occasion);
@@ -46,5 +48,4 @@ public class HappyFashionController {
 	public String index() {
 		return "index";
 	}
-
 }

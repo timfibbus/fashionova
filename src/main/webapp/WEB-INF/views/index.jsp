@@ -4,6 +4,10 @@ pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+	crossorigin="anonymous">
 <link href="style.css" rel="stylesheet" />
 <head>
 
@@ -12,17 +16,21 @@ pageEncoding="ISO-8859-1"%>
 <title>What's up</title>
 </head>
 
-<center><h1>Look through our premade occasions or <br> enter in the search what you're looking for!</h1></center>
+
+
+
 <body class="back">
 
-<p class="walk">
-<form action="/search-outfit">
+
 	<div class="wishlist">
-		<a href="/wishlist">View your wishlist</a>
+		<a href="/wishlist"><button>View your wishlist</button></a>
 	</div>
-	<br> 
+	 
 	<div class="closet">
-		<a href="/closet">View your closet</a>
+		<a href="/closet"><button>View your closet</button></a>
+<center><h1>Look through our premade occasions or <br> enter in the search bar what you're looking for!</h1></center>
+<form action="/search-outfit">
+
 
 	</div>
 	<h1>Search</h1>
@@ -34,6 +42,7 @@ pageEncoding="ISO-8859-1"%>
 		<option value="mens">Men's</option>
 		<option value="womens">Women's</option>
 	</select>
+		<input type="submit" class="btn-primary" value="search"/>
 	<br>
 
 	<div class="login">
@@ -41,6 +50,35 @@ pageEncoding="ISO-8859-1"%>
 		<input type="password" name="login" placeholder="Password" /> <br>
 		<button type="submit">Login</button>
 	</div>
+
+		
+	<!--  	<select name="gender">
+			<option value=""></option>
+			<option value="mens">Men's</option>
+			<option value="womens">Women's</option>
+		</select>-->
+		
+		<!--   <div class="login">
+			<input type="text" name="login" placeholder="Username" /> <br>
+			<input type="password" name="login" placeholder="Password" /> <br>
+			<button type="submit">Login</button>
+		</div>-->
+
+		<!--  <form action="/search-outfit">
+		<div class="card">
+		
+		<p class="card-text center-text container">Welcome to Closet Clue<br>
+		We're here to help </p>
+		
+		</div>-->
+		<div class="index">
+			<button type="submit" name="occasion" value="wedding">
+				<img src="images/wedding.jpg" width="300" height="300" />
+			</button>
+			<button type="submit" name="occasion" value="graduation">
+				<img src="images/graduations.jpg" width="300" height="300" />
+			</button>
+
 
 	<!--  <form action="/search-outfit">-->
 	<div class="index">
@@ -105,7 +143,6 @@ pageEncoding="ISO-8859-1"%>
 <div class="wishlist">
 		<a href="/wishlist">View your wishlist</a>
 	</div>
-
 
 <div class="closet">
 		<a href="/closet">View your closet</a>
