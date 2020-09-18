@@ -1,4 +1,4 @@
-git<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
@@ -20,6 +20,14 @@ git<%@ page language="java" contentType="text/html; charset=UTF-8"
 <body>
  <!-- add for demo -->
 <div>
+<div class="index">
+		<a href="/index">Back to search</a>
+	</div>
+
+<div class="wishlist">
+		<a href="/wishlist">View your wishlist</a>
+	</div>
+
          <h2>Top picks from your closet</h2>
           
          <div>Create an outfit by moving the items into the box.</div>
