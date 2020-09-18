@@ -100,7 +100,7 @@
 
 <div class="closet">
 			<a href="/closet">View your closet</a>
-
+			<a href="/upload">Upload Image</a>
 		</div>
 
 	</form>

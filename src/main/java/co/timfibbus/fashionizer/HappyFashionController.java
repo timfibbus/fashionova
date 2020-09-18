@@ -47,4 +47,10 @@ public class HappyFashionController {
 		return "about";
 	}
 
+	
+	
+	@RequestMapping("/upload")
+	public String uploadImage() {
+		return "uploadimage";
+	}
 }
