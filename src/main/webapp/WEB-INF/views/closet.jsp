@@ -20,6 +20,7 @@
 <body>
  <!-- add for demo -->
 <div>
+
          <h2>Your closet</h2>
          <div>
 <form action="/closet/sort">
@@ -41,6 +42,17 @@
 </form>
 		<a href="/" class="btn-secondary">Return Home</a>
 		</div>
+
+<div class="index">
+		<a href="/index">Back to search</a>
+	</div>
+
+<div class="wishlist">
+		<a href="/wishlist">View your wishlist</a>
+	</div>
+
+         <h2>Top picks from your closet</h2>
+
           
          <div>Create an outfit by moving the items into the box.</div>
     	

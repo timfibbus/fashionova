@@ -17,7 +17,7 @@ public class HappyFashionController {
 	@RequestMapping("/")
 	public String home() {
 
-		return "index";
+		return "about";
 	}
 
 	@RequestMapping("/search-outfit")
@@ -44,8 +44,14 @@ public class HappyFashionController {
 		return "results2";
 	}
 
-	@RequestMapping("/about")
-	public String aboutUs() {
-		return "about";
+	@RequestMapping("/index")
+	public String index() {
+		return "index";
 	}
+	
+	@RequestMapping("/upload")
+	public String uploadImage() {
+		return "uploadimage";
+	}
+
 }
