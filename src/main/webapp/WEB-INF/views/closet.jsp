@@ -20,6 +20,32 @@
 <body>
  <!-- add for demo -->
 <div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+         <h2>Your closet</h2>
+         <div>
+<form action="/closet/sort">
+			<select name="occasion">
+				<option value="">All</option>
+				<option value="graduation">Graduation</option>
+				<option value="wedding">Wedding</option>
+				<option value="business casual">Business Casual</option>
+				<option value="barbeque outfit">Barbeque Day</option>
+				<option value="cocktail outfit">Cocktail Party</option>
+				<option value="black tie event">Black Tie Event</option>
+				<option value="interview attire">Job Interview</option>
+				<option value="disco outfit">Discotheque</option>
+				<option value="funeral attire">Funeral</option>
+				<option value="casual attire">Casual Attire</option>
+				<option value="fine dining attire">Fancy Dinner</option>
+				<option value="semi formal attire">Semi-Formal</option>
+			</select> <input type="submit" value="sort"/>
+</form>
+		<a href="/" class="btn-secondary">Return Home</a>
+		</div>
+=======
+>>>>>>> user-login
 <div class="index">
 		<a href="/index">Back to search</a>
 	</div>
@@ -29,6 +55,7 @@
 	</div>
 
          <h2>Top picks from your closet</h2>
+>>>>>>> master
           
          <div>Create an outfit by moving the items into the box.</div>
     	
@@ -50,9 +77,6 @@
     </div>
     </c:if>
     </c:forEach>
-    <div class="slide">
-        <img src="http://placehold.it/300x150"/>
-    </div>
 
 </div>
 
@@ -69,9 +93,6 @@
     </div>
     </c:if>
     </c:forEach>
-    <div class="slide">
-        <img src="http://placehold.it/300x150"/>
-    </div>
 </div>
 </div> 
  
@@ -87,30 +108,10 @@
     </div>
     </c:if>
 	</c:forEach>
-    <div class="slide3">
-        <img src="http://placehold.it/300x150"/>
-    </div>
 </div>
 </div>
 
-<div>
-<form action="/closet/sort">
-			<select name="occasion">
-				<option value="graduation">Graduation</option>
-				<option value="wedding">Wedding</option>
-				<option value="business casual">Business Casual</option>
-				<option value="barbeque outfit">Barbeque Day</option>
-				<option value="cocktail outfit">Cocktail Party</option>
-				<option value="black tie event">Black Tie Event</option>
-				<option value="interview attire">Job Interview</option>
-				<option value="disco outfit">Discotheque</option>
-				<option value="funeral attire">Funeral</option>
-				<option value="casual attire">Casual Attire</option>
-				<option value="fine dining attire">Fancy Dinner</option>
-				<option value="semi formal attire">Semi-Formal</option>
-			</select> <input type="submit" value="sort"/>
-</form>
-</div>
+
 </div>
 
       <script type="text/javascript">

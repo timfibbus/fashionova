@@ -42,7 +42,7 @@ public class FashionService {
 	
 	public List<ShoppingResults> searchShopping(String outfit, String search, String gender) {
 		UriComponentsBuilder b = UriComponentsBuilder.fromHttpUrl("https://serpapi.com/search");
-		b.queryParam("q", outfit + search + gender);
+		b.queryParam("q", outfit+ "%20" + search+ "%20" + gender);
 		b.queryParam("gl", "us");
 		b.queryParam("tbm","shop");
 		b.queryParam("hl", "en");
