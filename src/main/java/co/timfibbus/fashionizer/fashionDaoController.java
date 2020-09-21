@@ -14,7 +14,8 @@ public class fashionDaoController {
 
 	@Autowired
 	closetDao closet;
-	
+	@Autowired
+	SavedClosetDao saved;
 	@Autowired
 	wishlistDao wish;
 	
@@ -115,7 +116,19 @@ public class fashionDaoController {
 		model.addAttribute("thumbnail", thumb);
 		return "confirm";
 	}
+	@RequestMapping("/closet/save")
+	public String savedOutfit(Model model, @RequestParam("top") String top, @RequestParam("bottom") String bottom, @RequestParam("accessories") String accessories, @RequestParam("shoes") String shoes) {
+		SavedCloset sav = new SavedCloset();
+		sav.setTop(top);
+		sav.setBottom(bottom);
+		sav.setAccessories(accessories);
+		sav.setShoes(shoes);
+		System.out.println(sav.toString());
+		saved.save(sav);
+		return "redirect:/closet";
+	}
 
+		
 	
 //	@RequestMapping("/closet/add")
 //	public String addToCloset(Closet closet) {
@@ -130,4 +143,3 @@ public class fashionDaoController {
 //	}
 
 }
-	

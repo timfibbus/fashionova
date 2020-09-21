@@ -15,21 +15,19 @@
 </head>
 <body>
 
-  <form method="post" enctype="multipart/form-data">
+  <form method="post" enctype="multipart/form-data" action="/confirm-upload">
     <input type="file" name="files[]" multiple>
+    <input type="hidden" name="file" value="${response.json }" multiple>
     <input type="submit" value="Upload Files" name="submit">
   </form>
-
-  <p id="data">
-  
-  <form method="post" enctype="multipart/form-data">
-    <input type="hidden" name="uploadjson" multiple>
-    <input type="hidden" value="Upload Files" name="submit">
+  <p id="response"></p>
+  <p id="data"></p>
+  <form method ="post" enctype="multipart/form-data" >
+  	<input type="hidden" value="${Object.url}" name="photoId">
   </form>
 
-  </p>
 
- <script> const url = "https://api.cloudinary.com/v1_1/djnmoo66f/image/upload";
+ <script> const url = "https://api.cloudinary.com/v1_1/dca8dycl4/image/upload";
 const form = document.querySelector("form");
 
 form.addEventListener("submit", (e) => {
@@ -51,6 +49,7 @@ form.addEventListener("submit", (e) => {
         return response.json();
       })
       .then((data) => {
+    	  console.log(data);
         document.getElementById("data").innerHTML += data;
       });
   }

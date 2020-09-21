@@ -13,10 +13,11 @@ public class HappyFashionController {
 
 	@Autowired
 	FashionService fs;
+	@Autowired
+	UploadApiService upload;
 
 	@RequestMapping("/")
 	public String home() {
-
 		return "about";
 	}
 
@@ -52,6 +53,12 @@ public class HappyFashionController {
 	@RequestMapping("/upload")
 	public String uploadImage() {
 		return "uploadimage";
+	}
+	
+	@RequestMapping("/confirm-upload")
+	public String showUpload(@RequestParam("file") String file) {
+		List<Upload> ups = upload.uploadThis(file);
+		return "confirm-upload";
 	}
 
 }
