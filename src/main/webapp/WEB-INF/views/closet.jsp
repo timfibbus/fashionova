@@ -58,7 +58,7 @@
  <div id="dropBox" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)">Build Outfit
  
 
-							<input type="hidden" name="thumbnail" value="${result.thumbnail}" />
+								
 						     </div><input type="submit" class="card-link" value="save outfit" /> </form> 
  <!-- add for demo -->
 <div>
@@ -69,11 +69,11 @@
 
 	<c:forEach var="item" items="${closet }">
 	<c:if test="${item.type.contains('top')}">
-	<div class="container card cloth1 slide">
-        <input type="hidden" name="top" value="${item.thumbnail}" />
-        <img id="${item.id }" src="${item.thumbnail }"
-        draggable="true" 
-        ondragstart="return dragStart(event)"/>
+	<div class="container card cloth1 slide" draggable="true" 
+        ondragstart="return dragStart(event)" id="${item.id }">
+        <input type="hidden" name="top" value="${item.thumbnail}" draggable="true"/>
+        <img src="${item.thumbnail }" draggable="false"/>
+        
     </div>
     </c:if>
     </c:forEach>
@@ -83,14 +83,12 @@
 <div>
 <div id="carousel2">
 <label>Bottoms</label>
-
-	<c:forEach var="item" items="${closet }">
+        	<c:forEach var="item" items="${closet }">
 	<c:if test="${item.type.contains('bottom')}">
-	<div id="myImg" class="container card cloth1 slide ">
-        <img id="${item.id }" src="${item.thumbnail }"
-        draggable="true"
-        ondragstart="return dragStart(event)"/>
-        <input type="hidden" name="bottom" value="${item.thumbnail}" />
+	<div class="container card cloth1 slide" draggable="true" 
+        ondragstart="return dragStart(event)" id="${item.id }">
+        <input type="hidden" name="bottom" value="${item.thumbnail}" draggable="true"/>
+        <img src="${item.thumbnail }" draggable="false"/>
         <div> <button class="btn-primary open-button" onclick="openForm()">Open Form</button>  
             <div class="form-popup" id="myForm">
   <form action="/action_page.php" class="form-container">
@@ -117,13 +115,12 @@
 <div>
 <div id="carousel3">
 <label>Accessories</label>
-	<c:forEach var="item" items="${closet }">
-	<c:if test="${item.type.contains('accessory')}">
-	<div class="container card slide3 cloth3">
-        <img id="${item.id }" src="${item.thumbnail }"
-        draggable="true" 
-        ondragstart="return dragStart(event)"/>
-        <input type="hidden" name="accessories" value="${item.thumbnail}" />
+    	<c:forEach var="item" items="${closet }">
+	<c:if test="${item.type.contains('accessories')}">
+	<div class="container card slide3 cloth3" draggable="true" 
+        ondragstart="return dragStart(event)" id="${item.id }">
+        <input type="hidden" name="accessories" value="${item.thumbnail}" draggable="true"/>
+        <img src="${item.thumbnail }" draggable="false"/>
     </div>
     </c:if>
 	</c:forEach>
@@ -134,11 +131,10 @@
 <label>Shoes</label>
 	<c:forEach var="item" items="${closet }">
 	<c:if test="${item.type.contains('accessory')}">
-	<div class="container card slide4 cloth3">
-        <img id="${item.id }" src="${item.thumbnail }"
-        draggable="true" 
-        ondragstart="return dragStart(event)"/>
-        <input type="hidden" name="shoes" value="${item.thumbnail}" />
+	<div class="container card slide4 cloth3" draggable="true" 
+        ondragstart="return dragStart(event)" id="${item.id }">
+        <input type="hidden" name="shoes" value="${item.thumbnail}" draggable="true"/>
+        <img src="${item.thumbnail }" draggable="false"/>
     </div>
     </c:if>
 	</c:forEach>
@@ -152,7 +148,7 @@
       function dragStart(ev) {
           ev.dataTransfer.effectAllowed='move';
           ev.dataTransfer.setData("Text", ev.target.getAttribute('id'));
-          ev.dataTransfer.setDragImage(ev.target,0,0);
+          ev.dataTransfer.setDragImage(ev.target.querySelector("img"),0,0);
           return true;
        }
        function dragEnter(ev) {

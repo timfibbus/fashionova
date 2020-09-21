@@ -117,7 +117,7 @@ public class fashionDaoController {
 		return "confirm";
 	}
 	@RequestMapping("/closet/save")
-	public String savedOutfit(Model model, @RequestParam("top") String top, @RequestParam("bottom") String bottom, @RequestParam("accessories") String accessories, @RequestParam("shoes") String shoes) {
+	public String savedOutfit(Model model, @RequestParam(required=false) String top, @RequestParam(required=false) String bottom, @RequestParam(required=false) String accessories, @RequestParam(required=false) String shoes) {
 		SavedCloset sav = new SavedCloset();
 		sav.setTop(top);
 		sav.setBottom(bottom);
