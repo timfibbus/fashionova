@@ -36,6 +36,19 @@ background-color: white; font-size: 35px;
 <title>Fashionizer Home</title>
 </head>
 <body>
+
+<div class="container">
+<h1>ABOUT US</h1>
+<p> The Fashionizers were inspired by Cher's closet from the movie Clueless. Our application was made for anyone looking for outfit inspiration. 
+Whether you have an upcoming event or occassion, or just want a new daily outfit to search for, 
+you can use our website to search for an array of items. Add items you want to your wishlist and items you have to your closet.
+</div>
+<div>
+	<img src="images/chersclosetapp.jpg" width="300" height="300" />
+	</div>
+	
+<a href="/">Return home</a>
+
 <h1><center><img src="images/fashionizerlogo.png"/></center></h1>
 <p> Welcome to Fashionizer where you can store your personal wardrobe into our virtual closet and choose what you want to wear before you even leave your bed! You can also search through clothing online you may not own yet and buy/save them to a wishlist!</p>
 
@@ -43,5 +56,6 @@ background-color: white; font-size: 35px;
 <center><a href="/index"><button class="big-btn">Shop & Browse</button></a></center>
 <br>
 <center><a href="/closet"><button class="big-btn">Closet</button></a></center>
+
 </body>
 </html>

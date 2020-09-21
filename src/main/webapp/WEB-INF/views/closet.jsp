@@ -20,7 +20,13 @@
 <body>
  <!-- add for demo -->
 <div>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> master
          <h2>Your closet</h2>
          <div>
 <form action="/closet/sort">
