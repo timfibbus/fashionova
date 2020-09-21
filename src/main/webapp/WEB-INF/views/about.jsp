@@ -4,9 +4,14 @@ pageEncoding="ISO-8859-1"%>
 <html>
 <head>
 
-<Style type='text/css' >body{background-color:rgb(0,0,0);
+<style type='text/css' >
+body{
+background-color:rgb(0,0,0);
 background-image:url(http://www.zingerbugimages.com/backgrounds/leopard_print.jpg);
-background-position:top left;background-repeat:repeat;background-attachment:fixed;}</Style>
+background-position:top-left; 
+background-repeat:repeat;
+background-attachment:fixed;
+</style>
 <link href='https://fonts.googleapis.com/css?family=Fontdiner Swanky' rel='stylesheet'>
 <link href="style.css" rel="stylesheet" />
 <style>

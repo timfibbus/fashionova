@@ -54,9 +54,12 @@
 		</div>
           
          <div>Create an outfit by moving the items into the box.</div>
-    	
- <div id="dropBox" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)">Build Outfit</div>      
+   <form action="/closet/save"> 	
+ <div id="dropBox" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)">Build Outfit
+ 
 
+							<input type="hidden" name="thumbnail" value="${result.thumbnail}" />
+						     </div><input type="submit" class="card-link" value="save outfit" /> </form> 
  <!-- add for demo -->
 <div>
 </div>
@@ -67,6 +70,7 @@
 	<c:forEach var="item" items="${closet }">
 	<c:if test="${item.type.contains('top')}">
 	<div class="container card cloth1 slide">
+        <input type="hidden" name="top" value="${item.thumbnail}" />
         <img id="${item.id }" src="${item.thumbnail }"
         draggable="true" 
         ondragstart="return dragStart(event)"/>
@@ -86,6 +90,7 @@
         <img id="${item.id }" src="${item.thumbnail }"
         draggable="true"
         ondragstart="return dragStart(event)"/>
+        <input type="hidden" name="bottom" value="${item.thumbnail}" />
         <div> <button class="btn-primary open-button" onclick="openForm()">Open Form</button>  
             <div class="form-popup" id="myForm">
   <form action="/action_page.php" class="form-container">
@@ -118,6 +123,7 @@
         <img id="${item.id }" src="${item.thumbnail }"
         draggable="true" 
         ondragstart="return dragStart(event)"/>
+        <input type="hidden" name="accessories" value="${item.thumbnail}" />
     </div>
     </c:if>
 	</c:forEach>
@@ -132,6 +138,7 @@
         <img id="${item.id }" src="${item.thumbnail }"
         draggable="true" 
         ondragstart="return dragStart(event)"/>
+        <input type="hidden" name="shoes" value="${item.thumbnail}" />
     </div>
     </c:if>
 	</c:forEach>
