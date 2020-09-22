@@ -13,6 +13,7 @@ public class User {
 	private Long id;
 	private String username;
 	private String password;
+	private String passwordConfirm;
 
 	public User() {
 		super();
@@ -50,9 +51,18 @@ public class User {
 		this.password = password;
 	}
 
+	public String getPasswordConfirm() {
+		return passwordConfirm;
+	}
+
+	public void setPasswordConfirm(String passwordConfirm) {
+		this.passwordConfirm = passwordConfirm;
+	}
+
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", password=" + password + "]";
+		return "User [id=" + id + ", username=" + username + ", password=" + password + ", passwordConfirm="
+				+ passwordConfirm + "]";
 	}
 
 }
