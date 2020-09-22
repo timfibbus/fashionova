@@ -145,6 +145,11 @@ public class fashionDaoController {
 	}
 	
 
+	@RequestMapping("/upload")
+	public String uploadForm() {
+		return "uploadimage";
+	}
+	
 	@RequestMapping("/add-upload")
 	public String addUpload(@RequestParam("url") String url,@RequestParam("title") String title, @RequestParam("type") String type,
 			@RequestParam("description") String description, @RequestParam("occasion") String occasion, Model model) {
@@ -156,7 +161,7 @@ public class fashionDaoController {
 		close.setOccasion(occasion);
 		closet.save(close);
 		model.addAttribute("title", title);
-		return "redirect:closet";
+		return "redirect:/closet";
 	}
 //	@RequestMapping("/closet/add")
 //	public String addToCloset(Closet closet) {

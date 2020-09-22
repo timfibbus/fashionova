@@ -23,7 +23,7 @@
   </form>
 
   <p id="data">
-  
+
   <form action="add-upload" id="upload" method="post">
     <input id="url" type="hidden" name="url" >
         <input type="text" name="title" placeholder="Title of Clothing" >
