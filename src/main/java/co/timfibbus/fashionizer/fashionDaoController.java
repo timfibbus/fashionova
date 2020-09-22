@@ -119,6 +119,7 @@ public class fashionDaoController {
 		model.addAttribute("thumbnail", thumb);
 		return "confirm";
 	}
+
 	@RequestMapping("/closet/save")
 	public String savedOutfit(Model model, @RequestParam(required=false) String top, @RequestParam(required=false) String bottom, 
 			@RequestParam(required=false) String accessory, @RequestParam(required=false) String shoes) {
@@ -143,6 +144,20 @@ public class fashionDaoController {
 		
 	}
 	
+
+	@RequestMapping("/add-upload")
+	public String addUpload(@RequestParam("url") String url,@RequestParam("title") String title, @RequestParam("type") String type,
+			@RequestParam("description") String description, @RequestParam("occasion") String occasion, Model model) {
+		Closet close = new Closet();
+		close.setThumbnail(url);
+		close.setTitle(title);
+		close.setType(type);
+		close.setDescription(description);
+		close.setOccasion(occasion);
+		closet.save(close);
+		model.addAttribute("title", title);
+		return "redirect:closet";
+	}
 //	@RequestMapping("/closet/add")
 //	public String addToCloset(Closet closet) {
 //		closet.save(closet);
