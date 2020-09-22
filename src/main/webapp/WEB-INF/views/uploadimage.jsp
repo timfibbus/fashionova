@@ -15,16 +15,22 @@
 </head>
 <body>
 
+<h1> Upload An Image to Your Closet!</h1>
+<p>Please leave a description of your uploaded clothing item.</p>
   <form method="post" enctype="multipart/form-data">
-    <input type="file" name="files[]" multiple>
+    <input type="file" name="files[]">
     <input type="submit" value="Upload Files" name="submit">
   </form>
 
   <p id="data">
   
-  <form method="post" enctype="multipart/form-data">
-    <input type="hidden" name="uploadjson" multiple>
-    <input type="hidden" value="Upload Files" name="submit">
+  <form action="add-upload" id="upload" method="post">
+    <input id="url" type="hidden" name="url" >
+        <input type="text" name="title" placeholder="Title of Clothing" >
+        <input  type="text" name="type" placeholder="Type of Clothing" >
+    <input  type="text" name="description" placeholder="Description"  >
+    <input  type="text" name="occasion" placeholder="Occasion" >
+
   </form>
 
   </p>
@@ -51,9 +57,13 @@ form.addEventListener("submit", (e) => {
         return response.json();
       })
       .then((data) => {
-        document.getElementById("data").innerHTML += data;
-      });
-  }
+    	  console.log(data);
+        document.getElementById("data").innerHTML += data.secure_url;
+        var url= data.secure_url;
+        document.getElementById("url").value = url;
+        document.getElementById("upload").submit();
+        });
+ }
 });
 </script>
 </body>
