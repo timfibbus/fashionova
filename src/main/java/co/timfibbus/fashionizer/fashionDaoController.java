@@ -137,11 +137,9 @@ public class fashionDaoController {
 	
 	@RequestMapping("/view")
 	public String viewSaved(@RequestParam(required=false) int id, Model model) {
-		
 		List<String> outfit = out.findAllById(id);
 		model.addAttribute("outfit", outfit);
 		return "view-outfit";
-		
 	}
 	
 

@@ -50,15 +50,6 @@ public class HappyFashionController {
 		return "index";
 	}
 	
-	@RequestMapping("/upload")
-	public String uploadImage() {
-		return "uploadimage";
-	}
 	
-	@RequestMapping("/confirm-upload")
-	public String showUpload(@RequestParam("file") String file) {
-		List<Upload> ups = upload.uploadThis(file);
-		return "confirm-upload";
-	}
 
 }
