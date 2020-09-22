@@ -33,8 +33,9 @@
 
   </form>
 
+  </p>
 
- <script> const url = "https://api.cloudinary.com/v1_1/dca8dycl4/image/upload";
+ <script> const url = "https://api.cloudinary.com/v1_1/djnmoo66f/image/upload";
 const form = document.querySelector("form");
 
 form.addEventListener("submit", (e) => {
@@ -63,7 +64,6 @@ form.addEventListener("submit", (e) => {
         document.getElementById("upload").submit();
         });
  }
-
 });
 </script>
 </body>
