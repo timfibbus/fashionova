@@ -13,16 +13,47 @@
 <link href="style.css" rel="stylesheet" />
 <title>Insert title here</title>
 </head>
-<body>
+<body class="back">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" >Closet Clue</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+     <li class="nav-item active">
+        <a class="nav-link" href="/">About us</a>
+      </li>
+     <li class="nav-item active">
+        <a class="nav-link" href="/index">Find New</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/wishlist">View Wishlist <span class="sr-only">(current)</span></a>
+      </li>
+      
+      <li class="nav-item active">
+        <a class="nav-link" href="/closet">View Closet</a>
+      </li>
+      </li>
+     
+    </ul>
+  </div>
+</nav>
 
-<h1> Upload An Image to Your Closet!</h1>
-<p>Please leave a description of your uploaded clothing item.</p>
+<div class="header" align="center"><h1> Upload An Image to Your Closet!</h1></div>
+<div class="outerbox" >
+<div class="uploadbox" >
+
+<h5>Add clothing items to your closet here.</h5>
   <form method="post" enctype="multipart/form-data">
     <input type="file" name="files[]">
     <input type="submit" value="Upload Files" name="submit">
+    <br>
+    </br>
+    <p>Remember to fill out a description of your clothing item.</p>
   </form>
 
-  <p id="data">
+  <p id="data"></p>
 
   <form action="add-upload" id="upload" method="post">
     <input id="url" type="hidden" name="url" >
@@ -33,8 +64,9 @@
 
   </form>
 
-  </p>
-
+  
+</div>
+</div>
  <script> const url = "https://api.cloudinary.com/v1_1/djnmoo66f/image/upload";
 const form = document.querySelector("form");
 

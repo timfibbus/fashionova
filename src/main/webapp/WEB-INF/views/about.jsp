@@ -28,9 +28,9 @@ padding: 10px;
 <style>
 h1 {
 margin: auto;	
-width: 11%;
+width: 20%;
 text-align: center;
-padding: 10px;
+padding: 20px;
 background-color: white; font-size: 35px;
 </style>
 <style>
@@ -44,18 +44,34 @@ background-color: white; font-size: 35px;
 <title>Fashionizer Home</title>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" >Closet Clue</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+     <li class="nav-item active">
+        <a class="nav-link" href="/closet">View Closet</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/wishlist">View Wishlist <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/index">Find New</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/upload">Upload Clothing</a>
+      </li>
+      <li class="nav-item">
+        
+      </li>
+    </ul>
+  </div>
+</nav>
 
 <div class="container ">
-<h1>ABOUT US</h1>
-<p> The Fashionizers were inspired by Cher's closet from the movie Clueless. Our application was made for anyone looking for outfit inspiration. 
-Whether you have an upcoming event or occassion, or just want a new daily outfit to search for, 
-you can use our website to search for an array of items. Add items you want to your wishlist and items you have to your closet.
-</div>
-<div>
-	<img src="images/chersclosetapp.jpg" width="300" height="300" />
-	</div>
-	
-<a href="/">Return home</a>
+
 
 <h1><center><img src="images/fashionizerlogo.png"/></center></h1>
 <p> Welcome to Fashionizer where you can store your personal wardrobe into our virtual closet and choose what you want to wear before you even leave your bed! You can also search through clothing online you may not own yet and buy/save them to a wishlist!</p>

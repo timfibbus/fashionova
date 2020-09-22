@@ -1,10 +1,39 @@
+/* index/search page */
+.searchbox {
+margin: auto;	
+width: 20%;
+text-align: center;
+padding: 20px;
+top: 75px;
+background-color: white;
+position: absolute;
+
+left: 10px;
+}
+.search1 {
+margin: auto;	
+width: 20%;
+text-align: center;
+padding: 20px;
+background-color: white;
+position: absolute;
+top: 75px;
+right: 10px;
+}
+.search2 {
+margin: auto;	
+padding: 20px;
+
+}
+/* index/search page end */
+
 .index {
 	display: block;
 	text-align: center;
 }
 
 .back {
-	background-image: url("/images/puffy-cloud-pattern.jpg");
+	background-image: url(http://www.zingerbugimages.com/backgrounds/leopard_print.jpg);
 	background-repeat: repeat;
 	background-size: auto;
 }
@@ -71,7 +100,7 @@ label input[type="checkbox"] {
 #carousel {
 	width: 70%;
 	height: 170px;
-	background-color: #ff0000;
+	background-color: #ffffff;
 	position: relative;
 	top: 50%; 
 	padding: 0.5em;
@@ -87,7 +116,7 @@ label input[type="checkbox"] {
 #carousel2 {
 	width: 70%;
 	height: 170px;
-	background-color: #ff0000;
+	background-color: #ffffff;
 	position: relative;
 	top: 50%;
 	padding: 0.5em;
@@ -103,7 +132,7 @@ label input[type="checkbox"] {
 #carousel3 {
 	width: 320px;
 	height: 90%;
-	background-color: #ff0000;
+	background-color: #ffffff;
 	position: absolute;
 	top: 75px;
 	right: 10px;
@@ -114,7 +143,7 @@ label input[type="checkbox"] {
 #carousel4 {
 	width: 320px;
 	height: 41%;
-	background-color: #ff0000;
+	background-color: #ffffff;
 	position: absolute;
 	top: 632px;
 	right: 10px;
@@ -136,9 +165,38 @@ label input[type="checkbox"] {
 	padding:10px;
 	margin:10px;
 	-moz-user-select:none;
-	background-color: #FF6699; 
+	background-color: #FF0000; 
 	width:70%; 
 	height:400px; 
 	left:100px;
 	}
+	
+.header{
+	color: white;
+	text-shadow: 2px 2px 7px #111111
+	
+}	
+	/* upload image page */
+
+.uploadbox{
+	width: 60%;
+	height: 125px;
+	background-color: white;
+	padding:10px;
+	margin:10px;
+	text-align: center;
+	margin: auto;
+	position: relative;
+	top: 0px;
+	
+}
+/* Wish list page */
+
+.wishlist{
+	margin: auto;
+	
+}
+	
+	
+
 	
