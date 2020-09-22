@@ -30,13 +30,15 @@ public class fashionDaoController {
 	
 	@RequestMapping("/closet/sort")
 	public String sortClosetByOccasion(Model model, @RequestParam("occasion") String occasion) {
+		if (occasion == "") {
+			List<Closet> these = closet.findAll();
+			model.addAttribute("closet", these);
+			return "closet";
+		} else {
 		List<Closet> these = closet.findAllByOccasion(occasion);
 		model.addAttribute("closet", these);
-		System.out.println(these);
-		for (Closet i : these) {
-			System.out.println(i.toString());
-			}
 		return "closet";
+		}	
 	}
 	
 	@RequestMapping("/wishlist")
@@ -68,9 +70,10 @@ public class fashionDaoController {
 		wishy.setPrice(price);
 		wishy.setLink(link);
 		wishy.setOccasion(occasion);
+		System.out.println(wishy.toString());
 		wish.save(wishy);
 		model.addAttribute("title", title);
-		System.out.println(wishy.toString());
+		
 		//System.out.println(wish.findById(3L).get().getThumbnail());
 		return "confirm";
 	}
@@ -97,7 +100,7 @@ public class fashionDaoController {
 	
 	@RequestMapping("/confirm-closet")
 	public String confirmClosetAdd(Model model, @RequestParam("thumbnail") String thumbnail, @RequestParam("title") String title,
-			@RequestParam("occasion") String occasion) {
+			@RequestParam(required=false) String occasion) {
 		model.addAttribute("thumbnail", thumbnail);
 		model.addAttribute("title", title);
 		model.addAttribute("occasion", occasion);
@@ -105,9 +108,11 @@ public class fashionDaoController {
 	}
 	
 	@RequestMapping("/confirm")
-	public String confirm(@RequestParam("title") String title, Model model) {
+	public String confirm(@RequestParam("title") String title, @RequestParam("thumbnail") String thumbnail, Model model) {
 		String wish = title;
+		String thumb = thumbnail;
 		model.addAttribute("title", wish);
+		model.addAttribute("thumbnail", thumb);
 		return "confirm";
 	}
 	@RequestMapping("/add-upload")

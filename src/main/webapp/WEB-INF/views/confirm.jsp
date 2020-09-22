@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="/style.css">
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
 	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
@@ -12,16 +13,17 @@
 <meta charset="ISO-8859-1" content="width=device-width, initial-scale=1">
 <title>Insert title here</title>
 </head>
-<body>
+<body class="back container">
 	
-	<div>
+	<div class="card">
 		<p>You added:</p>
 		<c:out value="${title }" />
-		<img name="image" src="${thumbnail }" class="card-img-top"/>
+		<img class="card-img-top" src="${thumbnail }"/>
 		<br><br>
-		<a class="btn-warning" href="/wishlist">View Wishlist</a>
-		<a class="btn-secondary" href="/">Return to homepage</a>
-		
+		<div class="card-body">
+		<a class="btn-warning card-text" href="/wishlist">View Wishlist</a>
+		<a class="btn-secondary card-text" href="/">Return to homepage</a>
+		</div>
 	</div>
 	
 </body>

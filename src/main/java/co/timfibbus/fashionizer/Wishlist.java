@@ -17,7 +17,7 @@ public class Wishlist {
 	private String title;
 	private String link;
 	private String price;
-	@Column(length=000)
+	@Column(length=2000)
 	private String thumbnail;
 	private String occasion;
 	
