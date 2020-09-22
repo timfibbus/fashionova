@@ -3,10 +3,18 @@ pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-
-<Style type='text/css' >body{background-color:rgb(0,0,0);
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+	crossorigin="anonymous">
+<style type='text/css' >
+body{
+background-color:rgb(0,0,0);
 background-image:url(http://www.zingerbugimages.com/backgrounds/leopard_print.jpg);
-background-position:top left;background-repeat:repeat;background-attachment:fixed;}</Style>
+background-position:top-left; 
+background-repeat:repeat;
+background-attachment:fixed;
+</style>
 <link href='https://fonts.googleapis.com/css?family=Fontdiner Swanky' rel='stylesheet'>
 <link href="style.css" rel="stylesheet" />
 <style>
@@ -37,7 +45,7 @@ background-color: white; font-size: 35px;
 </head>
 <body>
 
-<div class="container">
+<div class="container ">
 <h1>ABOUT US</h1>
 <p> The Fashionizers were inspired by Cher's closet from the movie Clueless. Our application was made for anyone looking for outfit inspiration. 
 Whether you have an upcoming event or occassion, or just want a new daily outfit to search for, 
@@ -56,6 +64,11 @@ you can use our website to search for an array of items. Add items you want to y
 <center><a href="/index"><button class="big-btn">Shop & Browse</button></a></center>
 <br>
 <center><a href="/closet"><button class="big-btn">Closet</button></a></center>
+
+
+	
+<a href="/">Return home</a>
+
 
 </body>
 </html>

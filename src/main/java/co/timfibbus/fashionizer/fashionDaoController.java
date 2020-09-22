@@ -1,6 +1,7 @@
 package co.timfibbus.fashionizer;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,8 @@ public class fashionDaoController {
 	SavedClosetDao saved;
 	@Autowired
 	wishlistDao wish;
+	@Autowired
+	SavedClosetOutfitDao out;
 	
 	@RequestMapping("/closet")
 	public String showCloset(Model model) {	
@@ -117,18 +120,28 @@ public class fashionDaoController {
 		return "confirm";
 	}
 	@RequestMapping("/closet/save")
-	public String savedOutfit(Model model, @RequestParam("top") String top, @RequestParam("bottom") String bottom, @RequestParam("accessories") String accessories, @RequestParam("shoes") String shoes) {
+	public String savedOutfit(Model model, @RequestParam(required=false) String top, @RequestParam(required=false) String bottom, 
+			@RequestParam(required=false) String accessory, @RequestParam(required=false) String shoes) {
 		SavedCloset sav = new SavedCloset();
-		sav.setTop(top);
-		sav.setBottom(bottom);
-		sav.setAccessories(accessories);
-		sav.setShoes(shoes);
+		List<String> outfit = new ArrayList<>();
+		outfit.add(top);
+		outfit.add(bottom);
+		outfit.add(accessory);
+		outfit.add(shoes);
+		sav.setOutfit(outfit);
 		System.out.println(sav.toString());
 		saved.save(sav);
 		return "redirect:/closet";
 	}
-
+	
+	@RequestMapping("/view")
+	public String viewSaved(@RequestParam(required=false) int id, Model model) {
 		
+		List<String> outfit = out.findAllById(id);
+		model.addAttribute("outfit", outfit);
+		return "view-outfit";
+		
+	}
 	
 //	@RequestMapping("/closet/add")
 //	public String addToCloset(Closet closet) {

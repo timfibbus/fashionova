@@ -15,6 +15,7 @@ pageEncoding="ISO-8859-1"%>
 <meta charset="ISO-8859-1" content="width=device-width, initial-scale=1">
 <title>What's up</title>
 </head>
+
 <div>
 <h1 class="center-text card"><center>Closet Clue</center></h1>
 
@@ -23,16 +24,17 @@ pageEncoding="ISO-8859-1"%>
 <center><h1>Look through our premade occasions or <br> enter in the search what you're looking for!</h1></center>
 <body class="back">
 
-<p class="walk">
-<form action="/search-outfit">
+
 	<div class="wishlist">
-		<a href="/wishlist">View your wishlist</a>
+		<a href="/wishlist"><button>View your wishlist</button></a>
 	</div>
-	<br> 
+	 
 	<div class="closet">
-		<a href="/closet">View your closet</a>
+		<a href="/closet"><button>View your closet</button></a>
+<center><h1>Look through our premade occasions or <br> enter in the search bar what you're looking for!</h1></center>
 
 	</div>
+		<form action="/search-outfit">
 	<h1>Search</h1>
 	<input type="text" name="search" placeholder="Enter what to search!" />
 
@@ -42,6 +44,7 @@ pageEncoding="ISO-8859-1"%>
 		<option value="mens">Men's</option>
 		<option value="womens">Women's</option>
 	</select>
+		<input type="submit" class="btn-primary" value="search"/>
 	<br>
 
 	<div class="login">
@@ -49,8 +52,14 @@ pageEncoding="ISO-8859-1"%>
 		<input type="password" name="login" placeholder="Password" /> <br>
 		<button type="submit">Login</button>
 	</div>
-
-	<!--  <form action="/search-outfit">-->
+		<div class="index">
+			<button type="submit" name="occasion" value="wedding">
+				<img src="images/wedding.jpg" width="300" height="300" />
+			</button>
+			<button type="submit" name="occasion" value="graduation">
+				<img src="images/graduations.jpg" width="300" height="300" />
+			</button>
+	</div>
 	<div class="index">
 		<button type="submit" name="occasion" value="wedding">
 			<img src="images/wedding.jpg" width="300" height="300" />
@@ -58,9 +67,7 @@ pageEncoding="ISO-8859-1"%>
 		<button type="submit" name="occasion" value="graduation">
 			<img src="images/graduations.jpg" width="300" height="300" />
 		</button>
-
 	</div>
-
 	<br>
 	<div class="index">
 		<button type="submit" name="occasion" value="business casual">
@@ -106,6 +113,7 @@ pageEncoding="ISO-8859-1"%>
 			<img src="images/semiform.jpg" width="300" height="300" />
 		</button>
 	</div>
+	</form>
 	<div class="about">
 		<a href="/">About us</a>
 	</div>
@@ -120,6 +128,6 @@ pageEncoding="ISO-8859-1"%>
 			<a href="/upload">Upload Image</a>
 		</div>
 
-</form>
+
 </body>
 </html>

@@ -67,8 +67,6 @@ label input[type="checkbox"] {
 .confirm {
 	text-align: center;
 }
-
-
 /*for closet page */
 #carousel {
 	width: 70%;
@@ -132,6 +130,7 @@ label input[type="checkbox"] {
 #carousel3 .slide {
 	display: inline-block;
 }
+
 #dropBox { 
 	float:left;
 	padding:10px;
