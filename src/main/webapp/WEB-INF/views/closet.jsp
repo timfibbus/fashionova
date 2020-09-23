@@ -11,13 +11,14 @@
 	crossorigin="anonymous">
 <link rel="stylesheet" href="/closet.css">
 <link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/about.css">
 <meta charset="UTF-8">
 <title>Closet</title>
 
 <head>      
 
 </head>
-<body>
+<body class="body">
 
 <div>
 
@@ -67,8 +68,9 @@
 	<div class="container card cloth1 slide" draggable="true" 
         ondragstart="return dragStart(event)" id="${item.id }">
         <input type="hidden" name="top" value="${item.thumbnail}" draggable="true"/>
-        <img src="${item.thumbnail }" draggable="false"/>
-        
+        <div >
+        <img class="img-responsive center-block" src="${item.thumbnail }" alt="Your Alt Text" draggable="false" />
+        </div>
     </div>
     </c:if>
     </c:forEach>

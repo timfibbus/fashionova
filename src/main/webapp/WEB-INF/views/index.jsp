@@ -11,7 +11,6 @@ pageEncoding="ISO-8859-1"%>
 <link href="style.css" rel="stylesheet" />
 <head>
 
-
 <meta charset="ISO-8859-1" content="width=device-width, initial-scale=1">
 <title>What's up</title>
 </head>
@@ -20,10 +19,7 @@ pageEncoding="ISO-8859-1"%>
 <h1 class="center-text card"><center>Closet Clue</center></h1>
 
 </div>
-
-<center><h1>Look through our premade occasions or <br> enter in the search what you're looking for!</h1></center>
 <body class="back">
-
 
 	<div class="wishlist">
 		<a href="/wishlist"><button>View your wishlist</button></a>
@@ -51,14 +47,6 @@ pageEncoding="ISO-8859-1"%>
 		<input type="text" name="login" placeholder="Username" /> <br>
 		<input type="password" name="login" placeholder="Password" /> <br>
 		<button type="submit">Login</button>
-	</div>
-		<div class="index">
-			<button type="submit" name="occasion" value="wedding">
-				<img src="images/wedding.jpg" width="300" height="300" />
-			</button>
-			<button type="submit" name="occasion" value="graduation">
-				<img src="images/graduations.jpg" width="300" height="300" />
-			</button>
 	</div>
 	<div class="index">
 		<button type="submit" name="occasion" value="wedding">
@@ -127,7 +115,6 @@ pageEncoding="ISO-8859-1"%>
 			<a href="/closet">View your closet</a>
 			<a href="/upload">Upload Image</a>
 		</div>
-
 
 </body>
 </html>
