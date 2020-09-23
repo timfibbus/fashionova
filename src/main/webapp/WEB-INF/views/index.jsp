@@ -12,11 +12,9 @@ pageEncoding="ISO-8859-1"%>
 <head>
 
 <meta charset="ISO-8859-1" content="width=device-width, initial-scale=1">
-<title>What's up</title>
+<title>Search For New Items</title>
 </head>
 
-<div>
-<h1 class="center-text card"><center>Closet Clue</center></h1>
 
 </div>
 <body class="back">
@@ -29,7 +27,44 @@ pageEncoding="ISO-8859-1"%>
 		<a href="/closet"><button>View your closet</button></a>
 <center><h1>Look through our premade occasions or <br> enter in the search bar what you're looking for!</h1></center>
 
+
+<body class="back">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" >Closet Clue</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+     <li class="nav-item active">
+        <a class="nav-link" href="/">About us</a>
+      </li>
+     <li class="nav-item active">
+        <a class="nav-link" href="/closet">View Closet</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/wishlist">View Wishlist <span class="sr-only">(current)</span></a>
+      </li>
+      
+      <li class="nav-item active">
+        <a class="nav-link" href="/upload">Upload Clothing</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/signup">Create an Account</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/login">Login</a>
+      </li>
+     
+     
+    </ul>
+  </div>
+</nav>
+
+<div class="search1"><h3 >Look through our pre-made occasions icons or <br> enter in the search bar what you're looking for!</h3></center>
+</div>
 	</div>
+	<div class= "searchbox">
 		<form action="/search-outfit">
 	<h1>Search</h1>
 	<input type="text" name="search" placeholder="Enter what to search!" />
@@ -42,11 +77,21 @@ pageEncoding="ISO-8859-1"%>
 	</select>
 		<input type="submit" class="btn-primary" value="search"/>
 	<br>
+</div>
 
 	<div class="login">
 		<input type="text" name="login" placeholder="Username" /> <br>
 		<input type="password" name="login" placeholder="Password" /> <br>
 		<button type="submit">Login</button>
+<div class ="search2">
+		<div class="index">
+			<button type="submit" name="occasion" value="wedding">
+				<img src="images/wedding.jpg" width="300" height="300" />
+			</button>
+			<button type="submit" name="occasion" value="graduation">
+				<img src="images/graduations.jpg" width="300" height="300" />
+			</button>
+
 	</div>
 	<div class="index">
 		<button type="submit" name="occasion" value="wedding">
@@ -102,19 +147,11 @@ pageEncoding="ISO-8859-1"%>
 		</button>
 	</div>
 	</form>
-	<div class="about">
-		<a href="/">About us</a>
-	</div>
+	
+</div>
 
-<div class="wishlist">
-		<a href="/wishlist">View your wishlist</a>
-	</div>
 
-<div class="closet">
 
-			<a href="/closet">View your closet</a>
-			<a href="/upload">Upload Image</a>
-		</div>
 
 </body>
 </html>

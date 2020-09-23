@@ -6,35 +6,37 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Create an Account</title>
+<title>Login to Closet Clue</title>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
 	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
 	crossorigin="anonymous">
 <link href="style.css" rel="stylesheet" />
-
 </head>
 <body>
 
-	<h1>Sign up with a username and password below!</h1>
+	<h1>Please enter your username and password below:</h1>
 
-	<form action="signup" method="post">
+	<%-- <p class="message"><c:out value="${message }"/></p> --%>
+
+	<form action="login" method="post">
 
 		<p>
 			<label for="username">Username:</label> <input id="username"
-				name="username" placeholder="username" />
+				type="text" name="username" placeholder="username" />
 		</p>
 		<p>
 			<label for="password">Password:</label> <input id="password"
-				type="password" name="password" placeholder="username" />
+				type="password" name="password" placeholder="password" />
 		</p>
 
 		<p>
-			<button>Create Account</button>
+			<button>Login</button>
 		</p>
 	</form>
 
 	<br>
+
 
 </body>
 </html>

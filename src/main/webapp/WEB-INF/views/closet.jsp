@@ -18,14 +18,42 @@
 <head>      
 
 </head>
+
 <body class="body">
+
+<body class="back">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" >Closet Clue</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+     <li class="nav-item active">
+        <a class="nav-link" href="/">About us</a>
+      </li>
+     <li class="nav-item active">
+        <a class="nav-link" href="/index">Find New</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/wishlist">View Wishlist <span class="sr-only">(current)</span></a>
+      </li>
+      
+      <li class="nav-item active">
+        <a class="nav-link" href="/upload">Upload Clothing</a>
+      </li>
+      </li>
+     
+    </ul>
+  </div>
+</nav>
 
 <div>
 
-<div class="wishlist">
-		<a href="/wishlist">View your wishlist</a>
-	</div>
-         <h2>Your closet</h2>
+
+         <div class="header"><h1>Welcome to Your Fashionizer</h1>
+         Sort Closet by Category</div>
+         
          <div>
 <form action="/closet/sort">
 			<select name="occasion">
@@ -44,17 +72,15 @@
 				<option value="semi formal attire">Semi-Formal</option>
 			</select> <input type="submit" value="sort"/>
 </form>
-		<a href="/" class="btn-secondary">Return To Search</a>
-		</div>
+		
 
-<div class="wishlist">
-		<a href="/wishlist">View your wishlist</a>
-	</div>
+
           
-         <div>Create an outfit by moving the items into the box.</div>
+         
    <form action="/closet/save"> 	
- <div id="dropBox" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)">Build Outfit						
-						     </div><input type="submit" class="card-link" value="save outfit" /> </form> 
+   <div id="dropBox" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)"><h3>Create an outfit by moving the items into the box.</h3>						
+	<input id="save" type="submit" class="card-link" value="save outfit" /> </div>
+	</form> 
 
 <div>
 </div>
@@ -76,7 +102,7 @@
     </c:forEach>
 
 </div>
-
+<br></br>
 <div>
 <div id="carousel2">
 <label>Bottoms</label>
@@ -109,7 +135,9 @@
     </c:if>
 	</c:forEach>
 </div>
+
 </div>
+<br></br>
 <div>
 <div id="carousel4">
 <label>Shoes</label>

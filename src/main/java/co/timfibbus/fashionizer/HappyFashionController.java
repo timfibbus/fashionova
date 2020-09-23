@@ -13,8 +13,7 @@ public class HappyFashionController {
 
 	@Autowired
 	FashionService fs;
-	@Autowired
-	UploadApiService upload;
+	
 
 	@RequestMapping("/")
 	public String home() {
@@ -49,4 +48,5 @@ public class HappyFashionController {
 	public String index() {
 		return "index";
 	}
+
 }
