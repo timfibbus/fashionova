@@ -27,7 +27,7 @@ public class UserController {
 	}
 
 	@PostMapping("/signup")
-	public String submitSignup(User user, @RequestParam("confirm-password") String confirmPassword, Model model) {
+	public String submitSignup(User user, Model model) {
 
 		User existingUser = userDao.findByUsername(user.getUsername());
 		if (existingUser != null) {
@@ -36,13 +36,13 @@ public class UserController {
 			return "signup";
 
 		}
-//		if (confirmPassword.equals(user.getPassword())) {
+//		if (confirmPassword.contentEquals(user.getPassword())) {
 //			model.addAttribute("message", "The passwords you entered do not match. Please try again.");
 //			return "signup";
 //		}
 
-		String encodepass = Base64.getEncoder().encodeToString(user.getPassword().getBytes());
-		user.setPassword(encodepass);
+		String encodePass = Base64.getEncoder().encodeToString(user.getPassword().getBytes());
+		user.setPassword(encodePass);
 		userDao.save(user);
 
 		session.setAttribute("user", user);
@@ -62,9 +62,9 @@ public class UserController {
 		User user = userDao.findByUsername(username);
 
 		byte[] decodeByte = Base64.getDecoder().decode(user.getPassword());
-		String decodepass = new String(decodeByte);
+		String decodePass = new String(decodeByte);
 
-		if (!password.contentEquals(decodepass)) {
+		if (!password.contentEquals(decodePass)) {
 			model.addAttribute("message", "Incorrect password or username. Please try again.");
 			return "login";
 		}

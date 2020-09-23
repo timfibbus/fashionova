@@ -22,16 +22,15 @@
 
 		<p>
 			<label for="username">Username:</label> <input id="username"
-				name="username" value="<c:out value="${param.username }"/>" required
-				minlength="3" />
+				name="username" placeholder="username" />
 		</p>
 		<p>
 			<label for="password">Password:</label> <input id="password"
-				type="password" name="password" required minlength="3" />
+				type="password" name="password" placeholder="username" />
 		</p>
 
 		<p>
-			<button>Submit</button>
+			<button>Create Account</button>
 		</p>
 	</form>
 

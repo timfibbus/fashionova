@@ -17,16 +17,17 @@
 
 	<h1>Please enter your username and password below:</h1>
 
+	<%-- <p class="message"><c:out value="${message }"/></p> --%>
+
 	<form action="login" method="post">
 
 		<p>
 			<label for="username">Username:</label> <input id="username"
-				name="username" value="<c:out value="${param.username }"/>" required
-				minlength="3" />
+				type="text" name="username" placeholder="username" />
 		</p>
 		<p>
 			<label for="password">Password:</label> <input id="password"
-				type="password" name="password" required minlength="3" />
+				type="password" name="password" placeholder="password" />
 		</p>
 
 		<p>
