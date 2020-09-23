@@ -17,7 +17,7 @@
 
 	<h1>Please enter your username and password below:</h1>
 
-	<%-- <p class="message"><c:out value="${message }"/></p> --%>
+	 <p class="message"><c:out value="${message }"/></p>
 
 	<form action="login" method="post">
 

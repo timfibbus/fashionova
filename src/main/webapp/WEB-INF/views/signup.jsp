@@ -17,6 +17,8 @@
 <body>
 
 	<h1>Sign up with a username and password below!</h1>
+	
+	<p class="message"><c:out value="${message }"/></p>
 
 	<form action="signup" method="post">
 
@@ -26,7 +28,12 @@
 		</p>
 		<p>
 			<label for="password">Password:</label> <input id="password"
-				type="password" name="password" placeholder="username" />
+				type="password" name="password" placeholder="password" />
+		</p>
+		
+		<p>
+			<label for="passwordConfirm">Re-enter Password:</label> <input id="passwordConfirm"
+				type="password" name="passwordConfirm" placeholder="password" />
 		</p>
 
 		<p>
