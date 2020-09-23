@@ -13,22 +13,80 @@
 <link href="style.css" rel="stylesheet" />
 <title>Insert title here</title>
 </head>
-<body>
+<body class="back">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" >Closet Clue</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+     <li class="nav-item active">
+        <a class="nav-link" href="/">About us</a>
+      </li>
+     <li class="nav-item active">
+        <a class="nav-link" href="/index">Find New</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/wishlist">View Wishlist <span class="sr-only">(current)</span></a>
+      </li>
+      
+      <li class="nav-item active">
+        <a class="nav-link" href="/closet">View Closet</a>
+      </li>
+      </li>
+     
+    </ul>
+  </div>
+</nav>
 
+<div class="header" align="center"><h1> Upload An Image to Your Closet!</h1></div>
+<div class="outerbox" >
+<div class="uploadbox" >
+
+<h5>Add clothing items to your closet here.</h5>
   <form method="post" enctype="multipart/form-data">
-    <input type="file" name="files[]" multiple>
+    <input type="file" name="files[]">
     <input type="submit" value="Upload Files" name="submit">
+    <br>
+    </br>
+    <p>Remember to fill out a description of your clothing item.</p>
   </form>
 
-  <p id="data">
+  <p id="data"></p>
+
+  <form action="add-upload" id="upload" method="post">
+    <input id="url" type="hidden" name="url" >
+        <input type="text" name="title" placeholder="Title of Clothing" >
+        <select name="type" >
+                <option >Type</option>
+                <option value="tops">Top</option>
+				<option value="bottoms">Bottom</option>
+				<option value="shoes">Shoes</option>
+				<option value="accesories">Accessories</option>
+				</select>
+    <input  type="text" name="description" placeholder="Description"  >
+    <select name="occasion">
+				<option >Occasion</option>
+				<option value="graduation">Graduation</option>
+				<option value="wedding">Wedding</option>
+				<option value="business casual">Business Casual</option>
+				<option value="barbeque outfit">Barbeque Day</option>
+				<option value="cocktail outfit">Cocktail Party</option>
+				<option value="black tie event">Black Tie Event</option>
+				<option value="interview attire">Job Interview</option>
+				<option value="disco outfit">Discotheque</option>
+				<option value="funeral attire">Funeral</option>
+				<option value="casual attire">Casual Attire</option>
+				<option value="fine dining attire">Fancy Dinner</option>
+				<option value="semi formal attire">Semi-Formal</option>
+			</select> 
+              
+  </form>
+
   
-  <form method="post" enctype="multipart/form-data">
-    <input type="hidden" name="uploadjson" multiple>
-    <input type="hidden" value="Upload Files" name="submit">
-  </form>
-
-  </p>
-
+</div>
+</div>
  <script> const url = "https://api.cloudinary.com/v1_1/djnmoo66f/image/upload";
 const form = document.querySelector("form");
 
@@ -51,9 +109,13 @@ form.addEventListener("submit", (e) => {
         return response.json();
       })
       .then((data) => {
-        document.getElementById("data").innerHTML += data;
-      });
-  }
+    	  console.log(data);
+        document.getElementById("data").innerHTML += data.secure_url;
+        var url= data.secure_url;
+        document.getElementById("url").value = url;
+        document.getElementById("upload").submit();
+        });
+ }
 });
 </script>
 </body>

@@ -13,10 +13,10 @@ public class HappyFashionController {
 
 	@Autowired
 	FashionService fs;
+	
 
 	@RequestMapping("/")
 	public String home() {
-
 		return "about";
 	}
 
@@ -48,11 +48,10 @@ public class HappyFashionController {
 	public String index() {
 		return "index";
 	}
+	
+	
+	
+	
+	
 
-	
-	
-	@RequestMapping("/upload")
-	public String uploadImage() {
-		return "uploadimage";
-	}
 }

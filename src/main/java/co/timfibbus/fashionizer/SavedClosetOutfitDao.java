@@ -4,10 +4,8 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
+public interface SavedClosetOutfitDao extends JpaRepository<SavedCloset, Long>{
 
-public interface closetDao extends JpaRepository<Closet, Long>{
-
-	List<Closet> findAllByOccasion(String occasion);
-	
+	List<String> findAllById(int id);
 	
 }

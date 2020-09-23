@@ -13,17 +13,43 @@
 <link rel="stylesheet" href="/style.css">
 <meta charset="UTF-8">
 <title>Closet</title>
-<!-- add for demo -->
+
 <head>      
-   <!-- add for demo -->
+
 </head>
-<body>
- <!-- add for demo -->
+<body class="back">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" >Closet Clue</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+     <li class="nav-item active">
+        <a class="nav-link" href="/">About us</a>
+      </li>
+     <li class="nav-item active">
+        <a class="nav-link" href="/index">Find New</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/wishlist">View Wishlist <span class="sr-only">(current)</span></a>
+      </li>
+      
+      <li class="nav-item active">
+        <a class="nav-link" href="/upload">Upload Clothing</a>
+      </li>
+      </li>
+     
+    </ul>
+  </div>
+</nav>
+
 <div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-         <h2>Your closet</h2>
+
+
+         <div class="header"><h1>Welcome to Your Fashionizer</h1>
+         Sort Closet by Category</div>
+         
          <div>
 <form action="/closet/sort">
 			<select name="occasion">
@@ -42,55 +68,48 @@
 				<option value="semi formal attire">Semi-Formal</option>
 			</select> <input type="submit" value="sort"/>
 </form>
-		<a href="/" class="btn-secondary">Return Home</a>
-		</div>
-=======
->>>>>>> user-login
-<div class="index">
-		<a href="/index">Back to search</a>
-	</div>
+		
 
-<div class="wishlist">
-		<a href="/wishlist">View your wishlist</a>
-	</div>
 
-         <h2>Top picks from your closet</h2>
->>>>>>> master
           
-         <div>Create an outfit by moving the items into the box.</div>
-    	
- <div id="dropBox" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)">Build Outfit</div>      
+         
+   <form action="/closet/save"> 	
+   <div id="dropBox" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)"><h3>Create an outfit by moving the items into the box.</h3>						
+	<input id="save" type="submit" class="card-link" value="save outfit" /> </div>
+	</form> 
 
- <!-- add for demo -->
 <div>
 </div>
 
 <div id="carousel">
-<label>Tops</label>
+<label class="carousel-overlay">Tops</label>
 
 	<c:forEach var="item" items="${closet }">
 	<c:if test="${item.type.contains('top')}">
-	<div class="slide cloth">
-        <img id="${item.id }" src="${item.thumbnail }"
-        draggable="true" 
-        ondragstart="return dragStart(event)"/>
+
+	<div class="container card cloth1 slide" draggable="true" 
+        ondragstart="return dragStart(event)" id="${item.id }">
+        <input type="hidden" name="top" value="${item.thumbnail}" draggable="true"/>
+        <img src="${item.thumbnail }" draggable="false"/>
+        
     </div>
     </c:if>
     </c:forEach>
 
 </div>
-
+<br></br>
 <div>
 <div id="carousel2">
 <label>Bottoms</label>
-
-	<c:forEach var="item" items="${closet }">
+        	<c:forEach var="item" items="${closet }">
 	<c:if test="${item.type.contains('bottom')}">
-	<div class="slide cloth">
-        <img id="${item.id }" src="${item.thumbnail }"
-        draggable="true" 
-        ondragstart="return dragStart(event)"/>
-    </div>
+
+	<div class="container card cloth1 slide" draggable="true" 
+        ondragstart="return dragStart(event)" id="${item.id }">
+        <input type="hidden" name="bottom" value="${item.thumbnail}" draggable="true"/>
+        <img src="${item.thumbnail }" draggable="false"/>
+        </div>
+
     </c:if>
     </c:forEach>
 </div>
@@ -99,26 +118,44 @@
 <div>
 <div id="carousel3">
 <label>Accessories</label>
-	<c:forEach var="item" items="${closet }">
+
+    	<c:forEach var="item" items="${closet }">
 	<c:if test="${item.type.contains('accessory')}">
-	<div class="slide3 cloth">
-        <img id="${item.id }" src="${item.thumbnail }"
-        draggable="true" 
-        ondragstart="return dragStart(event)"/>
+	<div class="container card slide3 cloth3" draggable="true" 
+        ondragstart="return dragStart(event)" id="${item.id }">
+        <input type="hidden" name="accessory" value="${item.thumbnail}" draggable="true"/>
+        <img src="${item.thumbnail }" draggable="false"/>
+
+    </div>
+    </c:if>
+	</c:forEach>
+</div>
+
+</div>
+<br></br>
+<div>
+<div id="carousel4">
+<label>Shoes</label>
+	<c:forEach var="item" items="${closet }">
+	<c:if test="${item.type.contains('shoes')}">
+	<div class="container card slide4 cloth3" draggable="true" 
+        ondragstart="return dragStart(event)" id="${item.id }">
+        <input type="hidden" name="shoes" value="${item.thumbnail}" draggable="true"/>
+        <img src="${item.thumbnail }" draggable="false"/>
+
     </div>
     </c:if>
 	</c:forEach>
 </div>
 </div>
 
-
 </div>
 
-      <script type="text/javascript">
+<script type="text/javascript">
       function dragStart(ev) {
           ev.dataTransfer.effectAllowed='move';
           ev.dataTransfer.setData("Text", ev.target.getAttribute('id'));
-          ev.dataTransfer.setDragImage(ev.target,0,0);
+          ev.dataTransfer.setDragImage(ev.target.querySelector("img"),0,0);
           return true;
        }
        function dragEnter(ev) {
@@ -134,6 +171,14 @@
           ev.stopPropagation();
           return false;
        }
-      </script>
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
 </body>
 </html>
