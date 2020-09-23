@@ -15,19 +15,6 @@ pageEncoding="ISO-8859-1"%>
 <title>Search For New Items</title>
 </head>
 
-
-</div>
-<body class="back">
-
-	<div class="wishlist">
-		<a href="/wishlist"><button>View your wishlist</button></a>
-	</div>
-	 
-	<div class="closet">
-		<a href="/closet"><button>View your closet</button></a>
-<center><h1>Look through our premade occasions or <br> enter in the search bar what you're looking for!</h1></center>
-
-
 <body class="back">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" >Closet Clue</a>
@@ -60,12 +47,11 @@ pageEncoding="ISO-8859-1"%>
     </ul>
   </div>
 </nav>
-
+<form action="/search-outfit">
 <div class="search1"><h3 >Look through our pre-made occasions icons or <br> enter in the search bar what you're looking for!</h3></center>
 </div>
-	</div>
 	<div class= "searchbox">
-		<form action="/search-outfit">
+		
 	<h1>Search</h1>
 	<input type="text" name="search" placeholder="Enter what to search!" />
 
@@ -78,21 +64,7 @@ pageEncoding="ISO-8859-1"%>
 		<input type="submit" class="btn-primary" value="search"/>
 	<br>
 </div>
-
-	<div class="login">
-		<input type="text" name="login" placeholder="Username" /> <br>
-		<input type="password" name="login" placeholder="Password" /> <br>
-		<button type="submit">Login</button>
 <div class ="search2">
-		<div class="index">
-			<button type="submit" name="occasion" value="wedding">
-				<img src="images/wedding.jpg" width="300" height="300" />
-			</button>
-			<button type="submit" name="occasion" value="graduation">
-				<img src="images/graduations.jpg" width="300" height="300" />
-			</button>
-
-	</div>
 	<div class="index">
 		<button type="submit" name="occasion" value="wedding">
 			<img src="images/wedding.jpg" width="300" height="300" />
@@ -146,9 +118,9 @@ pageEncoding="ISO-8859-1"%>
 			<img src="images/semiform.jpg" width="300" height="300" />
 		</button>
 	</div>
-	</form>
-	
 </div>
+	</form>
+
 
 
 

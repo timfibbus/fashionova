@@ -49,8 +49,6 @@
 </nav>
 
 <div>
-
-
          <div class="header"><h1>Welcome to Your Fashionizer</h1>
          Sort Closet by Category</div>
          
