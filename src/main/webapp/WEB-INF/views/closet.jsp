@@ -75,8 +75,9 @@
 
           
          
-   <form action="/closet/save"> 	
+   <form action="/closet/name"> 	
    <div id="dropBox" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)"><h3>Create an outfit by moving the items into the box.</h3>						
+	<input type="text" name="title" />
 	<input id="save" type="submit" class="card-link" value="save outfit" /> </div>
 	</form> 
 

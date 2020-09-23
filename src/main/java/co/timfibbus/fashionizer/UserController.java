@@ -25,7 +25,7 @@ public class UserController {
 	public String showSignup() {
 		return "signup";
 	}
-
+ 
 	@PostMapping("/signup")
 	public String submitSignup(User user, Model model) {
 

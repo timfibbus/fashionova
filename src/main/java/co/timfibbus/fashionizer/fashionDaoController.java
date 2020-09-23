@@ -1,6 +1,4 @@
 package co.timfibbus.fashionizer;
-
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,8 +17,7 @@ public class fashionDaoController {
 	SavedClosetDao saved;
 	@Autowired
 	wishlistDao wish;
-	@Autowired
-	SavedClosetOutfitDao out;
+
 	
 	@RequestMapping("/closet")
 	public String showCloset(Model model) {	
@@ -81,6 +78,7 @@ public class fashionDaoController {
 		//System.out.println(wish.findById(3L).get().getThumbnail());
 		return "confirm";
 	}
+	
 	@RequestMapping("/delete-wishlist")
 	public String deleteWish(@RequestParam("id") Long id) {
 		wish.deleteById(id);
@@ -119,30 +117,52 @@ public class fashionDaoController {
 		model.addAttribute("thumbnail", thumb);
 		return "confirm";
 	}
-
-	@RequestMapping("/closet/save")
+	
+	@RequestMapping("/closet/name")
 	public String savedOutfit(Model model, @RequestParam(required=false) String top, @RequestParam(required=false) String bottom, 
-			@RequestParam(required=false) String accessory, @RequestParam(required=false) String shoes) {
-		SavedCloset sav = new SavedCloset();
-		List<String> outfit = new ArrayList<>();
-		outfit.add(top);
-		outfit.add(bottom);
-		outfit.add(accessory);
-		outfit.add(shoes);
-		sav.setOutfit(outfit);
-		System.out.println(sav.toString());
-		saved.save(sav);
+			@RequestParam(required=false) String accessory, @RequestParam(required=false) String shoes, @RequestParam(required=false) String title) {
+		SavedCloset outfit = new SavedCloset();
+		outfit.setTop(top);
+		outfit.setBottom(bottom);
+		outfit.setAccessory(accessory);
+		outfit.setShoes(shoes);
+		outfit.setTitle(title);
+		saved.save(outfit);
 		return "redirect:/closet";
 	}
-	
+
+	/*
+	@RequestMapping("/closet/save")
+	public String savedOutfit(Model model, @RequestParam(required=false) String top, @RequestParam(required=false) String bottom, 
+			@RequestParam(required=false) String accessory, @RequestParam(required=false) String shoes, @RequestParam("title") String title) {
+		SavedCloset outfit = new SavedCloset();
+		outfit.setTop(top);
+		outfit.setBottom(bottom);
+		outfit.setAccessory(accessory);
+		outfit.setShoes(shoes);
+		outfit.setTitle(title);
+		System.out.println(outfit.toString());
+		saved.save(outfit);
+		return "redirect:/closet";
+	}
+	*/
 	@RequestMapping("/view")
-	public String viewSaved(@RequestParam(required=false) int id, Model model) {
-		List<String> outfit = out.findAllById(id);
-		model.addAttribute("outfit", outfit);
+	public String chooseOne(Model model) {
+		List<SavedCloset> outs = saved.findAll();
+		model.addAttribute("outfit", outs);
+		return "view-outfit";
+	}
+	@RequestMapping("/view/select")
+	public String chosen(Model model, @RequestParam(required=false) Long id) {
+		List<SavedCloset> outs = saved.findAll();
+		SavedCloset theChosen =  saved.findById(id).orElse(null);
+		System.out.println(theChosen);
+		model.addAttribute("item", theChosen);
+		model.addAttribute("outfit", outs);
 		return "view-outfit";
 	}
 	
-
+	
 	@RequestMapping("/upload")
 	public String uploadForm() {
 		return "uploadimage";
@@ -161,6 +181,7 @@ public class fashionDaoController {
 		model.addAttribute("title", title);
 		return "redirect:/closet";
 	}
+	
 //	@RequestMapping("/closet/add")
 //	public String addToCloset(Closet closet) {
 //		closet.save(closet);

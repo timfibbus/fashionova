@@ -9,6 +9,9 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
 	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
 	crossorigin="anonymous">
+<link rel="stylesheet" href="/closet.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/about.css">
 	<style>
 html,body
 {
@@ -18,19 +21,40 @@ height:100%;
 <meta charset="ISO-8859-1">
 <title>Saved Outfits</title>
 </head>
-<body>
+<body class="body">
 	<h1>Select an outfit to view</h1>
-	<input type="number" name="id" />
-	<div class="container">
-		
-		<c:forEach var="item" items="${outfit }">
-			<c:out value="${item }" >
-			
-		<img id="redball" src="${item }" width="32" height="32" style="position:absolute;" />
-		</c:out>
-		</c:forEach>
-		
+	<div class="container float-left">
+	<c:forEach var="fit" items="${outfit }">
+	<form action="/view/select">
+	<input type="hidden" value="${fit.id }" name="id"/>
+	<input type="submit" value="${fit.title }" class="btn-primary"/>
+	<br>
+	</form>
+	</c:forEach>
+	
 	</div>
+		<div class="container float">
+		
+		<img src="${item.top }" />
+		<img src="${item.bottom }" />
+		<img src="${item.accessory }" />
+		<img src="${item.shoes }" />
+		
+		</div>
+		
+		<div>
+			<img id="redball" src="${item.top }" width="32" height="32" style="position:absolute;" />
+		</div>
+		<div>
+			<img id="redball" src="${item.bottom }" width="32" height="32" style="position:absolute;" />
+		</div>
+		<div>
+			<img id="redball" src="${item.accessory }" width="32" height="32" style="position:absolute;" />
+		</div>
+		<div>
+			<img id="redball" src="${item.shoes }" width="32" height="32" style="position:absolute;" />
+		</div>	
+	
 
 <script type="text/javascript">
 

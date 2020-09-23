@@ -18,24 +18,57 @@ public class SavedCloset {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@ElementCollection
-	@Column(name="the_outfit", length=3000)
-	private List<String> outfit;
-	
-	public List<String> getOutfit(){
-		return outfit;
-	}
-	
-	public void setOutfit(List<String> outfit) {
-		this.outfit=outfit;
-	}
+	private String top;
+	private String bottom;
+	private String accessory;
+	private String shoes;
+	private String title;
+
 	
 	public SavedCloset() {
+		super();
 	}
 
-	public SavedCloset(List<String> outfit) {
+	public SavedCloset(Long id, String top, String bottom, String accessory, String shoes, String title) {
 		super();
-		this.outfit = outfit;
+		this.id = id;
+		this.top = top;
+		this.bottom = bottom;
+		this.accessory = accessory;
+		this.shoes = shoes;
+		this.title = title;
+	}
+
+	public String getTop() {
+		return top;
+	}
+
+	public void setTop(String top) {
+		this.top = top;
+	}
+
+	public String getBottom() {
+		return bottom;
+	}
+
+	public void setBottom(String bottom) {
+		this.bottom = bottom;
+	}
+
+	public String getAccessory() {
+		return accessory;
+	}
+
+	public void setAccessory(String accessory) {
+		this.accessory = accessory;
+	}
+
+	public String getShoes() {
+		return shoes;
+	}
+
+	public void setShoes(String shoes) {
+		this.shoes = shoes;
 	}
 
 	public Long getId() {
@@ -46,11 +79,20 @@ public class SavedCloset {
 		this.id = id;
 	}
 
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
 	@Override
 	public String toString() {
-		return "SavedCloset [id=" + id + ", outfit=" + outfit + "]";
-	}
-		
+		return "SavedCloset [id=" + id + ", top=" + top + ", bottom=" + bottom + ", accessory=" + accessory + ", shoes="
+				+ shoes + ", title=" + title + "]";
+	}	
+	
 	
 }
 
