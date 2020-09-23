@@ -40,7 +40,13 @@ pageEncoding="ISO-8859-1"%>
       <li class="nav-item active">
         <a class="nav-link" href="/upload">Upload Clothing</a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/signup">Create an Account</a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/login">Login</a>
+      </li>
+     
      
     </ul>
   </div>
