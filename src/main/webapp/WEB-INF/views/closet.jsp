@@ -97,7 +97,7 @@
     </c:forEach>
 
 </div>
-
+<br></br>
 <div>
 <div id="carousel2">
 <label>Bottoms</label>
@@ -130,7 +130,9 @@
     </c:if>
 	</c:forEach>
 </div>
+
 </div>
+<br></br>
 <div>
 <div id="carousel4">
 <label>Shoes</label>
