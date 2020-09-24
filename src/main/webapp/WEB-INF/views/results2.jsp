@@ -24,7 +24,7 @@
 </head>
 <body class="back">
 
-<%@ include file="navbar.jsp"%>
+<%@ include file="header.jsp"%>
 	<div class="card">
 		<div class="card-body">
 			<h3 class="card-title">Here's what we found!</h3>

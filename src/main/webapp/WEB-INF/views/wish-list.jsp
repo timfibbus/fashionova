@@ -15,7 +15,7 @@
 </head>
 
 <body class="back">
-<%@ include file="navbar.jsp"%>
+<%@ include file="header.jsp"%>
 
 	<div class="header" align="center"><h1>Your Wish List!</h1>
          </div>

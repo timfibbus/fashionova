@@ -16,6 +16,7 @@ public class Wishlist {
 	private String type;
 	private String description;
 	private String title;
+	@Column(length=2000)
 	private String link;
 	private String price;
 	@Column(length=2000)

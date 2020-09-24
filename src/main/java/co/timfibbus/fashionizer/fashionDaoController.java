@@ -40,11 +40,15 @@ public class fashionDaoController {
 	@RequestMapping("/closet/sort")
 	public String sortClosetByOccasion(Model model, @RequestParam("occasion") String occasion) {
 		if (occasion == "") {
-			List<Closet> these = closet.findAll();
+			User current = (User)session.getAttribute("user");
+			Long id = current.getId();
+			List<Closet> these = closet.findAllByOwnerId(id);
 			model.addAttribute("closet", these);
 			return "closet";
 		} else {
-		List<Closet> these = closet.findAllByOccasion(occasion);
+		User current = (User)session.getAttribute("user");
+		Long id = current.getId();
+		List<Closet> these = closet.findAllByOccasionAndOwnerId(occasion, id);
 		model.addAttribute("closet", these);
 		return "closet";
 		}	
@@ -169,10 +173,10 @@ public class fashionDaoController {
 
 	
 	@RequestMapping("closet/delete")
-	public String deleteItem(@RequestParam(required=false) String id) {
+	public String deleteItem(@RequestParam(required=false) Long id) {
 		
-		long num=Long.valueOf(id);
-		closet.deleteById(num);
+
+		closet.deleteById(id);
 		return "redirect:/closet";
 	}
 	

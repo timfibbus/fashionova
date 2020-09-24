@@ -16,14 +16,8 @@
 <title>Confirm Closet</title>
 </head>
 <body class="confirm body">
-<%@ include file="navbar.jsp"%>
-        <a class="nav-link" href="/logout">Logout</a>
-      </li>
-     
-     
-    </ul>
-  </div>
-</nav>
+<%@ include file="header.jsp"%>
+
 
 	<form action="/closet/add">
 
@@ -34,8 +28,7 @@
 		<input type="hidden" value="${title }" name="title"/>
 
 		
-		<input type="text" name="title" placeholder="Title of Clothing" >
-		<select name="type" >
+		
 
 		<h2>Type of clothing (top, bottom, accessory, etc):</h2>
 		        <select name="type" >
@@ -60,14 +53,8 @@
 				<option value="fine dining attire">Fancy Dinner</option>
 				<option value="semi formal attire">Semi-Formal</option>
 			</select>
-		<h5>Brief description of article:</h5>
-		<p>Description: Color, fabrics, season and etc. <input type="text" name="description"> </input>
-	     </p>
-		<div>
-	     <br></br>
-		<button>Submit</button>
 
-				</select>
+			
 		<h2>Brief description of article:</h2>
 		<textarea name="description"></textarea>
 	     <div>
