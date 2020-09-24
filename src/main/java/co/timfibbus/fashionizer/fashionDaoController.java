@@ -152,9 +152,9 @@ public class fashionDaoController {
 		return "redirect:/closet";
 	}
 
-	/*
+	
 	@RequestMapping("/closet/save")
-	public String savedOutfit(Model model, @RequestParam(required=false) String top, @RequestParam(required=false) String bottom, 
+	public String savedOutfit2(Model model, @RequestParam(required=false) String top, @RequestParam(required=false) String bottom, 
 			@RequestParam(required=false) String accessory, @RequestParam(required=false) String shoes, @RequestParam("title") String title) {
 		SavedCloset outfit = new SavedCloset();
 		outfit.setTop(top);
@@ -166,7 +166,17 @@ public class fashionDaoController {
 		saved.save(outfit);
 		return "redirect:/closet";
 	}
-	*/
+
+	
+	@RequestMapping("closet/delete")
+	public String deleteItem(@RequestParam(required=false) String id) {
+		
+		long num=Long.valueOf(id);
+		closet.deleteById(num);
+		return "redirect:/closet";
+	}
+	
+
 	@RequestMapping("/view")
 	public String chooseOne(Model model) {
 		User current = (User)session.getAttribute("user");

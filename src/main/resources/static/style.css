@@ -187,6 +187,18 @@ label input[type="checkbox"] {
 	
 }
 	
+.trash { 
+	float:right
+	padding:10px;
+	margin:10px;
+	-moz-user-select:none;
+	background-color: #000000; 
+	position: relative;
+	height: 75px;
+	top:900px
+	}
+	 
+	
 .header{
 	color: white;
 	text-shadow: 2px 2px 7px #111111
@@ -212,6 +224,27 @@ label input[type="checkbox"] {
 	margin: auto;
 	
 }
+.confirm{
+	width: 50%;
+	height: 200px;
+	background-color: white;
+	padding:10px;
+	margin:10px;
+	text-align: center;
+	margin: auto;
+	position: relative;
+	top: 100px;
+	
+}
+/* Confirm Page list page */
+
+.logo{
+	width: 20%;
+	height: 50px;
+	margin: auto;
+	position: relative;
+	top: 300px;
+}
 	
 .confirmer {
 	
@@ -219,5 +252,28 @@ label input[type="checkbox"] {
 	background-color: #d4aae3;
 	opacity: 0.9;
 }
-
+.login{
+	width: 50%;
+	height: 400px;
+	background-color: white;
+	padding:10px;
+	margin:10px;
+	text-align: center;
+	margin: auto;
+	position: relative;
+	top: 100px;
 	
+}
+	
+.signup{
+	width: 50%;
+	height: 500px;
+	background-color: white;
+	padding:10px;
+	margin:10px;
+	text-align: center;
+	margin: auto;
+	position: relative;
+	top: 100px;
+	
+}

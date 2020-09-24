@@ -50,6 +50,7 @@
     </ul>
   </div>
 </nav>
+
 	<form action="/closet/add">
 
 	<div class="container jumbotron confirmer" >
@@ -57,6 +58,11 @@
 
 		<input type="hidden" value="${thumbnail }" name="thumbnail"/>
 		<input type="hidden" value="${title }" name="title"/>
+
+		
+		<input type="text" name="title" placeholder="Title of Clothing" >
+		<select name="type" >
+
 		<h2>Type of clothing (top, bottom, accessory, etc):</h2>
 		        <select name="type" >
                 <option >Type</option>
@@ -64,6 +70,29 @@
 				<option value="bottoms">Bottom</option>
 				<option value="shoes">Shoes</option>
 				<option value="accesories">Accessories</option>
+				</select> 
+				  <select name="occasion">
+				<option >Occasion</option>
+				<option value="graduation">Graduation</option>
+				<option value="wedding">Wedding</option>
+				<option value="business casual">Business Casual</option>
+				<option value="barbeque outfit">Barbeque Day</option>
+				<option value="cocktail outfit">Cocktail Party</option>
+				<option value="black tie event">Black Tie Event</option>
+				<option value="interview attire">Job Interview</option>
+				<option value="disco outfit">Discotheque</option>
+				<option value="funeral attire">Funeral</option>
+				<option value="casual attire">Casual Attire</option>
+				<option value="fine dining attire">Fancy Dinner</option>
+				<option value="semi formal attire">Semi-Formal</option>
+			</select>
+		<h5>Brief description of article:</h5>
+		<p>Description: Color, fabrics, season and etc. <input type="text" name="description"> </input>
+	     </p>
+		<div>
+	     <br></br>
+		<button>Submit</button>
+
 				</select>
 		<h2>Brief description of article:</h2>
 		<textarea name="description"></textarea>
@@ -72,6 +101,9 @@
 		<a class="btn-secondary" href="/index">Cancel</a>
 		</div>
 		</div>
+		
 	</form>
+	</div>
+	<div class="logo"><img src="images/fashionizerlogo.png"/></div>
 </body>
 </html>

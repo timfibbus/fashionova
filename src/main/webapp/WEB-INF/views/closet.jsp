@@ -49,6 +49,13 @@
 	<input type="text" name="title" />
 	<input id="save" type="submit" class="card-link" value="save outfit" /> </div>
 	</form> 
+
+  <form action="/closet/delete"> 	
+   <div class = "trash" width="30" height="30" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)">						
+	<input id="delete" type="submit" class="card-link" value="delete outfit" /> </div>
+	</form> 
+    
+
 <div>
 </div>
 
@@ -62,10 +69,15 @@
         ondragstart="return dragStart(event)" id="${item.id }">
         <input type="hidden" name="top" value="${item.thumbnail}" draggable="true"/>
         <input type="hidden" name="id" value="${item.id}" draggable="true"/>
+
+        <img src="${item.thumbnail }" draggable="false"/>
+        
+
         <div >
         <img class="img-responsive center-block" src="${item.thumbnail }" alt="Your Alt Text" draggable="false" />
         	
         </div>
+
     </div>
     </c:if>
     </c:forEach>
@@ -94,7 +106,7 @@
 <label>Accessories</label>
 
     	<c:forEach var="item" items="${closet }">
-	<c:if test="${item.type.contains('accessory')}">
+	<c:if test="${item.type.contains('accesories')}">
 	<div class="container card slide3 cloth3" draggable="true" 
         ondragstart="return dragStart(event)" id="${item.id }">
         <input type="hidden" name="accessory" value="${item.thumbnail}" draggable="true"/>
