@@ -135,6 +135,14 @@ public class fashionDaoController {
 		return "redirect:/closet";
 	}
 	
+	@RequestMapping("closet/delete")
+	public String deleteItem(@RequestParam(required=false) String id) {
+		
+		long num=Long.valueOf(id);
+		closet.deleteById(num);
+		return "redirect:/closet";
+	}
+	
 	@RequestMapping("/view")
 	public String viewSaved(@RequestParam(required=false) int id, Model model) {
 		

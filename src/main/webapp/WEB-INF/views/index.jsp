@@ -28,7 +28,7 @@ pageEncoding="ISO-8859-1"%>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
      <li class="nav-item active">
-        <a class="nav-link" href="/">About us</a>
+        <a class="nav-link" href="/">Home</a>
       </li>
      <li class="nav-item active">
         <a class="nav-link" href="/closet">View Closet</a>
@@ -71,14 +71,7 @@ pageEncoding="ISO-8859-1"%>
 </div>
 
 <div class ="search2">
-		<div class="index">
-			<button type="submit" name="occasion" value="wedding">
-				<img src="images/wedding.jpg" width="300" height="300" />
-			</button>
-			<button type="submit" name="occasion" value="graduation">
-				<img src="images/graduations.jpg" width="300" height="300" />
-			</button>
-	</div>
+	
 	<div class="index">
 		<button type="submit" name="occasion" value="wedding">
 			<img src="images/wedding.jpg" width="300" height="300" />

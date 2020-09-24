@@ -9,5 +9,7 @@ public interface closetDao extends JpaRepository<Closet, Long>{
 
 	List<Closet> findAllByOccasion(String occasion);
 	
+	Closet findByThumbnail(String thumbnail);
+	
 	
 }
