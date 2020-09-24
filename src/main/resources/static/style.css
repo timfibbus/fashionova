@@ -197,6 +197,11 @@ label input[type="checkbox"] {
 	
 }
 	
+.confirmer {
 	
+	width: 30%;
+	background-color: #d4aae3;
+	opacity: 0.9;
+}
 
 	

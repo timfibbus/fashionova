@@ -52,7 +52,13 @@
 				</tr>
 				<tr>
 					<th scope="row">Type</th>
-					<td><input type="text" name="type" /></td>
+					        <select name="type" >
+                <option >Type</option>
+                <option value="tops">Top</option>
+				<option value="bottoms">Bottom</option>
+				<option value="shoes">Shoes</option>
+				<option value="accesories">Accessories</option>
+				</select>
 				</tr>
 				<tr>
 					<th scope="row">Description</th>

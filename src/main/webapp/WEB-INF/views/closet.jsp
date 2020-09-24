@@ -42,13 +42,12 @@
       <li class="nav-item active">
         <a class="nav-link" href="/upload">Upload Clothing</a>
       </li>
-      </li>
+
      
     </ul>
   </div>
 </nav>
 
-<div>
          <div class="header"><h1>Welcome to Your Fashionizer</h1>
          Sort Closet by Category</div>
          
@@ -95,6 +94,7 @@
         <input type="hidden" name="top" value="${item.thumbnail}" draggable="true"/>
         <div >
         <img class="img-responsive center-block" src="${item.thumbnail }" alt="Your Alt Text" draggable="false" />
+        	
         </div>
     </div>
     </c:if>
@@ -113,7 +113,7 @@
         <input type="hidden" name="bottom" value="${item.thumbnail}" draggable="true"/>
         <img src="${item.thumbnail }" draggable="false"/>
         </div>
-
+		
     </c:if>
     </c:forEach>
 </div>
