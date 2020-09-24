@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class UserController {
@@ -27,7 +28,7 @@ public class UserController {
 	}
  
 	@PostMapping("/signup")
-	public String submitSignup(User user, Model model) {
+	public String submitSignup(User user,@RequestParam("passwordConfirm") String passwordConfirm, Model model) {
 
 		User existingUser = userDao.findByUsername(user.getUsername());
 		if (existingUser != null) {
@@ -36,17 +37,17 @@ public class UserController {
 			return "signup";
 
 		}
-//		if (confirmPassword.contentEquals(user.getPassword())) {
-//			model.addAttribute("message", "The passwords you entered do not match. Please try again.");
-//			return "signup";
-//		}
+		if (!passwordConfirm.contentEquals(user.getPassword())) {
+			model.addAttribute("message", "The passwords you entered do not match. Please try again.");
+			return "signup";
+		}
 
 		String encodePass = Base64.getEncoder().encodeToString(user.getPassword().getBytes());
 		user.setPassword(encodePass);
 		userDao.save(user);
 
 		session.setAttribute("user", user);
-		return "redirect:/";
+		return "redirect:/index";
 
 	}
 
@@ -58,26 +59,29 @@ public class UserController {
 
 	@PostMapping("/login")
 	public String submitLogin(@RequestParam("username") String username, @RequestParam("password") String password,
-			Model model) {
+			Model model, RedirectAttributes redirect) {
 		User user = userDao.findByUsername(username);
 
 		byte[] decodeByte = Base64.getDecoder().decode(user.getPassword());
 		String decodePass = new String(decodeByte);
 
 		if (!password.contentEquals(decodePass)) {
-			model.addAttribute("message", "Incorrect password or username. Please try again.");
+			model.addAttribute("message", "Incorrect password. Please try again.");
 			return "login";
 		}
 
 		session.setAttribute("user", user);
-		return "redirect:/";
+		redirect.addFlashAttribute("message", "You are now logged in.");
+		return "redirect:/index";
 	}
 
 	// LOGOUT METHOD
 	@RequestMapping("/logout")
-	public String logout() {
+	public String logout(RedirectAttributes redirect) {
 		session.invalidate();
-		return "redirect:/";
+		redirect.addFlashAttribute("message", "You are now logged out.");
+		
+		return "redirect:/index";
 	}
 
 }
