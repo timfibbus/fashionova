@@ -1,12 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
+
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" >Closet Clue</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,22 +24,14 @@
         <a class="nav-link" href="/signup">Create an Account</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/login">Login</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/logout">Logout</a>
-      </li>
-     
-     
+      <c:choose>
+         <c:when test = "${user} != null">
+            <a href="/logout">Logout</a>
+         </c:when>         <c:otherwise>
+            <a href="/login"></a>
+         </c:otherwise>
+	  </c:choose>
+     </li>
     </ul>
   </div>
 </nav>
-
-	<div>
-	
-	<p>You are uploading this to closet.  Lookin' good!</p>
-	
-	</div>
-
-</body>
-</html>

@@ -2,6 +2,8 @@ package co.timfibbus.fashionizer;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,7 +15,10 @@ public class HappyFashionController {
 
 	@Autowired
 	FashionService fs;
-	
+	@Autowired
+	HttpSession session;
+	@Autowired
+	UserDao user;
 
 	@RequestMapping("/")
 	public String home() {

@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 
 @Entity
@@ -20,10 +21,27 @@ public class Wishlist {
 	@Column(length=2000)
 	private String thumbnail;
 	private String occasion;
+	@ManyToOne
+	private User owner;
+	private Long user;
 	
 	public Wishlist() {	
 	}
 	
+	public Wishlist(Long id, String type, String description, String title, String link, String price, String thumbnail,
+			String occasion, Long user) {
+		super();
+		this.id = id;
+		this.type = type;
+		this.description = description;
+		this.title = title;
+		this.link = link;
+		this.price = price;
+		this.thumbnail = thumbnail;
+		this.occasion = occasion;
+		this.user = user;
+	}
+
 	public Wishlist(Long id, String type, String description, String title, String link, String price, String thumbnail,
 			String occasion) {
 		super();
@@ -37,7 +55,19 @@ public class Wishlist {
 		this.occasion = occasion;
 	}
 
-
+	public Wishlist(Long id, String type, String description, String title, String link, String price, String thumbnail,
+			String occasion, User owner) {
+		super();
+		this.id = id;
+		this.type = type;
+		this.description = description;
+		this.title = title;
+		this.link = link;
+		this.price = price;
+		this.thumbnail = thumbnail;
+		this.occasion = occasion;
+		this.owner = owner;
+	}
 
 	public Wishlist(Long id, String type, String description, String title, String link, String price,
 			String thumbnail) {
@@ -109,6 +139,26 @@ public class Wishlist {
 
 	public void setOccasion(String occasion) {
 		this.occasion = occasion;
+	}
+
+	public Long getUser() {
+		return user;
+	}
+
+	public void setUser(Long user) {
+		this.user = user;
+	}
+
+
+
+	public User getOwner() {
+		return owner;
+	}
+
+
+
+	public void setOwner(User owner) {
+		this.owner = owner;
 	}
 	
 }

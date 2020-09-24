@@ -35,7 +35,7 @@
       <li class="nav-item active">
         <a class="nav-link" href="/upload">Upload Clothing</a>
       </li>
-      </li>
+ 
      
     </ul>
   </div>

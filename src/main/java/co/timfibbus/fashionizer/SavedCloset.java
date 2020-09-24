@@ -12,6 +12,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class SavedCloset {
@@ -23,8 +24,22 @@ public class SavedCloset {
 	private String accessory;
 	private String shoes;
 	private String title;
+	@ManyToOne
+	private User owner;
 
 	
+	
+	public SavedCloset(Long id, String top, String bottom, String accessory, String shoes, String title, User owner) {
+		super();
+		this.id = id;
+		this.top = top;
+		this.bottom = bottom;
+		this.accessory = accessory;
+		this.shoes = shoes;
+		this.title = title;
+		this.owner = owner;
+	}
+
 	public SavedCloset() {
 		super();
 	}
@@ -91,6 +106,14 @@ public class SavedCloset {
 	public String toString() {
 		return "SavedCloset [id=" + id + ", top=" + top + ", bottom=" + bottom + ", accessory=" + accessory + ", shoes="
 				+ shoes + ", title=" + title + "]";
+	}
+
+	public User getOwner() {
+		return owner;
+	}
+
+	public void setOwner(User owner) {
+		this.owner = owner;
 	}	
 	
 }	
