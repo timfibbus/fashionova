@@ -9,4 +9,7 @@ public interface wishlistDao extends JpaRepository<Wishlist, Long>{
 	List<Wishlist> findByTitleContainsIgnoreCase(String title);
 	
 	
+	List<Wishlist> findAllByOwnerId(Long id);
+	
+	
 }

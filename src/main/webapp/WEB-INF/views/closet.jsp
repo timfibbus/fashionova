@@ -20,32 +20,7 @@
 </head>
 
 <body class="body">
-
-<body class="back">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" >Closet Clue</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-     <li class="nav-item active">
-        <a class="nav-link" href="/">About us</a>
-      </li>
-     <li class="nav-item active">
-        <a class="nav-link" href="/index">Find New</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/wishlist">View Wishlist <span class="sr-only">(current)</span></a>
-      </li>
-      
-      <li class="nav-item active">
-        <a class="nav-link" href="/upload">Upload Clothing</a>
-      </li>
-     
-    </ul>
-  </div>
-</nav>
+<%@ include file="navbar.jsp"%>
 
          <div class="header"><h1>Welcome to Your Fashionizer</h1>
          Sort Closet by Category</div>

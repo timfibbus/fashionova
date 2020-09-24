@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -28,6 +29,8 @@ public class Upload {
 	@JsonProperty("secure_url")
 	private String secureUrl;
 	private String etag;
+	@ManyToOne
+	private User owner;
 	
 	public Upload() {
 		
@@ -50,6 +53,26 @@ public class Upload {
 		this.secureUrl = secureUrl;
 		this.etag = etag;
 	}
+	
+	public Upload(Long id, String publicId, String signature, int width, int height, String format, String resourceType,
+			String createdAt, int bytes, String type, String url, String secureUrl, String etag, User owner) {
+		super();
+		this.id = id;
+		this.publicId = publicId;
+		this.signature = signature;
+		this.width = width;
+		this.height = height;
+		this.format = format;
+		this.resourceType = resourceType;
+		this.createdAt = createdAt;
+		this.bytes = bytes;
+		this.type = type;
+		this.url = url;
+		this.secureUrl = secureUrl;
+		this.etag = etag;
+		this.owner = owner;
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -127,6 +150,14 @@ public class Upload {
 	}
 	public void setEtag(String etag) {
 		this.etag = etag;
+	}
+
+	public User getOwner() {
+		return owner;
+	}
+
+	public void setOwner(User owner) {
+		this.owner = owner;
 	}
 	
 	

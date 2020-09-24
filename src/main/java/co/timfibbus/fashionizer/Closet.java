@@ -20,6 +20,21 @@ public class Closet {
 	@Column(length=2000)
 	private String thumbnail;
 	private String occasion;
+	private Long user;
+	@ManyToOne
+	private User owner;
+
+	public Closet(Long id, String type, String description, String title, String thumbnail, String occasion,
+			User owner) {
+		super();
+		this.id = id;
+		this.type = type;
+		this.description = description;
+		this.title = title;
+		this.thumbnail = thumbnail;
+		this.occasion = occasion;
+		this.owner = owner;
+	}
 
 	public Closet() {
 	}
@@ -41,6 +56,18 @@ public class Closet {
 		this.description = description;
 		this.title = title;
 		this.thumbnail = thumbnail;
+	}
+
+	public Closet(Long id, String type, String description, String title, String thumbnail, String occasion,
+			Long user) {
+		super();
+		this.id = id;
+		this.type = type;
+		this.description = description;
+		this.title = title;
+		this.thumbnail = thumbnail;
+		this.occasion = occasion;
+		this.user = user;
 	}
 
 	public Long getId() {
@@ -95,6 +122,22 @@ public class Closet {
 
 	public void setOccasion(String occasion) {
 		this.occasion = occasion;
+	}
+
+	public Long getUser() {
+		return user;
+	}
+
+	public void setUser(Long user) {
+		this.user = user;
+	}
+
+	public User getOwner() {
+		return owner;
+	}
+
+	public void setOwner(User owner) {
+		this.owner = owner;
 	}
 
 }

@@ -1,9 +1,12 @@
 package co.timfibbus.fashionizer;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class User {
@@ -14,6 +17,31 @@ public class User {
 	private String username;
 	private String password;
 	private String passwordConfirm;
+	@OneToMany(mappedBy = "owner")
+	private List<Closet> closetItems;
+	@OneToMany(mappedBy = "owner")
+	private List<Wishlist> wishlist;
+	@OneToMany(mappedBy = "owner")
+	private List<Upload> myUploads;
+	@OneToMany(mappedBy = "owner")
+	private List<SavedCloset> myOutfits;
+	
+
+	public List<SavedCloset> getMyOutfits() {
+		return myOutfits;
+	}
+
+	public void setMyOutfits(List<SavedCloset> myOutfits) {
+		this.myOutfits = myOutfits;
+	}
+
+	public List<Upload> getMyUploads() {
+		return myUploads;
+	}
+
+	public void setMyUploads(List<Upload> myUploads) {
+		this.myUploads = myUploads;
+	}
 
 	public User() {
 		super();
@@ -63,6 +91,22 @@ public class User {
 	public String toString() {
 		return "User [id=" + id + ", username=" + username + ", password=" + password + ", passwordConfirm="
 				+ passwordConfirm + "]";
+	}
+
+	public List<Closet> getClosetItems() {
+		return closetItems;
+	}
+
+	public void setClosetItems(List<Closet> closetItems) {
+		this.closetItems = closetItems;
+	}
+
+	public List<Wishlist> getWishlist() {
+		return wishlist;
+	}
+
+	public void setWishlist(List<Wishlist> wishlist) {
+		this.wishlist = wishlist;
 	}
 
 }
