@@ -5,7 +5,7 @@
 
 <div>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a href="/">Home</a> 
+
 		 <a class="navbar-brand" >Closet Clue</a>
 		
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,7 +15,7 @@
     <ul class="navbar-nav">
 		<c:if test = "${ not empty user }"> 
 		 <li class="nav-item active">
-        <a class="nav-link" href="/">About us</a>
+        <a class="nav-link" href="/">Home</a>
       </li>
      <li class="nav-item active">
         <a class="nav-link" href="/closet">View Closet</a>
@@ -28,8 +28,9 @@
         <a class="nav-link" href="/upload">Upload Clothing</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/signup">Create an Account</a>
-      </li>
+      	<a class="nav-link" href="/view">View outfits</a>
+      	</li>
+   
       <li class="nav-item active">
 		</c:if>
 		</ul>

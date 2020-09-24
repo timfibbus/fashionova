@@ -16,7 +16,6 @@ public class User {
 	private Long id;
 	private String username;
 	private String password;
-	private String passwordConfirm;
 	@OneToMany(mappedBy = "owner")
 	private List<Closet> closetItems;
 	@OneToMany(mappedBy = "owner")
@@ -79,18 +78,13 @@ public class User {
 		this.password = password;
 	}
 
-	public String getPasswordConfirm() {
-		return passwordConfirm;
-	}
 
-	public void setPasswordConfirm(String passwordConfirm) {
-		this.passwordConfirm = passwordConfirm;
-	}
+
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", password=" + password + ", passwordConfirm="
-				+ passwordConfirm + "]";
+		return "User [id=" + id + ", username=" + username + ", password=" + password + ", closetItems=" + closetItems
+				+ ", wishlist=" + wishlist + ", myUploads=" + myUploads + ", myOutfits=" + myOutfits + "]";
 	}
 
 	public List<Closet> getClosetItems() {

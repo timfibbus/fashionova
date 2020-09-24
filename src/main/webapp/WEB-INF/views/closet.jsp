@@ -97,6 +97,7 @@
 	<div class="container card cloth1 slide" draggable="true" 
         ondragstart="return dragStart(event)" id="${item.id }">
         <input type="hidden" name="bottom" value="${item.thumbnail}" draggable="true"/>
+        <input type="hidden" name="id" value="${item.id}" draggable="true"/>
         <img src="${item.thumbnail }" draggable="false"/>
         </div>
 		
@@ -114,6 +115,7 @@
 	<div class="container card slide3 cloth3" draggable="true" 
         ondragstart="return dragStart(event)" id="${item.id }">
         <input type="hidden" name="accessory" value="${item.thumbnail}" draggable="true"/>
+        <input type="hidden" name="id" value="${item.id}" draggable="true"/>
         <img src="${item.thumbnail }" draggable="false"/>
 
     </div>
@@ -131,6 +133,7 @@
 	<div class="container card slide4 cloth3" draggable="true" 
         ondragstart="return dragStart(event)" id="${item.id }">
         <input type="hidden" name="shoes" value="${item.thumbnail}" draggable="true"/>
+        <input type="hidden" name="id" value="${item.id}" draggable="true"/>
         <img src="${item.thumbnail }" draggable="false"/>
 
     </div>

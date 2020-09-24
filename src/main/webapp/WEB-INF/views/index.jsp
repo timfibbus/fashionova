@@ -38,7 +38,7 @@
 	<br>
 </div>
 <div class ="search2">
-
+<div class="container">
 	<div class="index">
 		<button type="submit" name="occasion" value="wedding">
 			<img src="images/wedding.jpg" width="300" height="300" />
@@ -92,7 +92,7 @@
 			<img src="images/semiform.jpg" width="300" height="300" />
 		</button>
 	</div>
-</div>
+</div></div>
 	</form>
 
 
