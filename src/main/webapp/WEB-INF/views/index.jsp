@@ -11,13 +11,9 @@ pageEncoding="ISO-8859-1"%>
 <link href="style.css" rel="stylesheet" />
 <head>
 
-
 <meta charset="ISO-8859-1" content="width=device-width, initial-scale=1">
 <title>Search For New Items</title>
 </head>
-
-
-
 
 <body class="back">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -46,17 +42,19 @@ pageEncoding="ISO-8859-1"%>
       <li class="nav-item active">
         <a class="nav-link" href="/login">Login</a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/logout">Logout</a>
+      </li>
      
      
     </ul>
   </div>
 </nav>
-
+<form action="/search-outfit">
 <div class="search1"><h3 >Look through our pre-made occasions icons or <br> enter in the search bar what you're looking for!</h3></center>
 </div>
-	</div>
 	<div class= "searchbox">
-		<form action="/search-outfit">
+		
 	<h1>Search</h1>
 	<input type="text" name="search" placeholder="Enter what to search!" />
 
@@ -69,9 +67,11 @@ pageEncoding="ISO-8859-1"%>
 		<input type="submit" class="btn-primary" value="search"/>
 	<br>
 </div>
-
 <div class ="search2">
+<<<<<<< HEAD
 	
+=======
+>>>>>>> f394a8c3b959ad58bc338eb762b991b72c30c7c2
 	<div class="index">
 		<button type="submit" name="occasion" value="wedding">
 			<img src="images/wedding.jpg" width="300" height="300" />
@@ -125,9 +125,8 @@ pageEncoding="ISO-8859-1"%>
 			<img src="images/semiform.jpg" width="300" height="300" />
 		</button>
 	</div>
-	</form>
-	
 </div>
+	</form>
 
 
 

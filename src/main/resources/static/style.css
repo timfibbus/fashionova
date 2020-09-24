@@ -170,6 +170,22 @@ label input[type="checkbox"] {
 	height:400px; 
 	left:100px;
 	}
+#dropBox2{
+
+	float:left;
+	padding:10px;
+	margin:10px;
+	-moz-user-select:none;
+			background-color: #FF0000;
+	background-image: url("trash.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 70px; 
+	height:100px; 
+	left:100px;
+	
+}
 	
 .trash { 
 	float:right
@@ -230,6 +246,11 @@ label input[type="checkbox"] {
 	top: 300px;
 }
 	
+.confirmer {
 	
+	width: 30%;
+	background-color: #d4aae3;
+	opacity: 0.9;
+}
 
 	

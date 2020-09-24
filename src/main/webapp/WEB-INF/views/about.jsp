@@ -7,24 +7,15 @@ pageEncoding="ISO-8859-1"%>
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
 	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
 	crossorigin="anonymous">
-<style type='text/css' >
-body{
-background-color:rgb(0,0,0);
-background-image:url(http://www.zingerbugimages.com/backgrounds/leopard_print.jpg);
-background-position:top-left; 
-background-repeat:repeat;
-background-attachment:fixed;
-</style>
+
 <link href='https://fonts.googleapis.com/css?family=Fontdiner Swanky' rel='stylesheet'>
 <link href="style.css" rel="stylesheet" />
-<style>
-p {
-background-color: white; font-size: 35px; 
-margin: auto;
-width: 50%;
-text-align: center;
-padding: 10px;
+<link href="about.css" rel="stylesheet" />
+<style type='text/css'>
+
 </style>
+<style type='text/css'>
+
 <style>
 h1 {
 margin: auto;	
@@ -34,15 +25,15 @@ padding: 20px;
 background-color: white; font-size: 35px;
 </style>
 <style>
-.big-btn {
-    width: 280px;
-    height: 160px;
-    font-size: 35px;
-    
+
 </style>
 <meta charset="ISO-8859-1">
 <title>Fashionizer Home</title>
 </head>
+
+<body class="body">
+
+
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" >Closet Clue</a>
@@ -70,21 +61,16 @@ background-color: white; font-size: 35px;
   </div>
 </nav>
 
-<div class="container ">
 
-
-<h1><center><img src="images/fashionizerlogo.png"/></center></h1>
-<p> Welcome to Fashionizer where you can store your personal wardrobe into our virtual closet and choose what you want to wear before you even leave your bed! You can also search through clothing online you may not own yet and buy/save them to a wishlist!</p>
-
-<br>
-<center><a href="/index"><button class="big-btn">Shop & Browse</button></a></center>
-<br>
-<center><a href="/closet"><button class="big-btn">Closet</button></a></center>
-
-
-	
-<a href="/">Return home</a>
-
+<div class="jumbotron">
+  <h1 class="display-4">Welcome to Closet Clue!</h1>
+  <p class="lead">Here you can store your personal wardrobe into our 
+virtual closet and choose what you want to wear before you even leave your bed!</p>
+  <hr class="my-4">
+  <p>You can also search through clothing online you may not own yet and buy/save them to a wishlist!</p>
+  <a class="btn btn-primary btn-lg" href="/index" role="button">Shop & Browse</a>
+   <a class="btn btn-primary btn-lg" href="/closet" role="button">Enter Closet</a>
+</div>
 
 </body>
 </html>

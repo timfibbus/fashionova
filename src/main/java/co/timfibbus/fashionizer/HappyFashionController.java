@@ -43,15 +43,10 @@ public class HappyFashionController {
 		model.addAttribute("results", outfits);
 		return "results2";
 	}
-
+	
 	@RequestMapping("/index")
 	public String index() {
 		return "index";
 	}
-	
-	
-	
-	
-	
 
 }

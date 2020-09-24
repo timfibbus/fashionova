@@ -11,12 +11,16 @@
 	crossorigin="anonymous">
 <link rel="stylesheet" href="/closet.css">
 <link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/about.css">
 <meta charset="UTF-8">
 <title>Closet</title>
 
 <head>      
 
 </head>
+
+<body class="body">
+
 <body class="back">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" >Closet Clue</a>
@@ -38,14 +42,10 @@
       <li class="nav-item active">
         <a class="nav-link" href="/upload">Upload Clothing</a>
       </li>
-      </li>
      
     </ul>
   </div>
 </nav>
-
-<div>
-
 
          <div class="header"><h1>Welcome to Your Fashionizer</h1>
          Sort Closet by Category</div>
@@ -68,15 +68,13 @@
 				<option value="semi formal attire">Semi-Formal</option>
 			</select> <input type="submit" value="sort"/>
 </form>
-		
-
-
-          
-         
-   <form action="/closet/save"> 	
+            
+   <form action="/closet/name"> 	
    <div id="dropBox" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)"><h3>Create an outfit by moving the items into the box.</h3>						
+	<input type="text" name="title" />
 	<input id="save" type="submit" class="card-link" value="save outfit" /> </div>
 	</form> 
+<<<<<<< HEAD
 
   <form action="/closet/delete"> 	
    <div class = "trash" width="30" height="30" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)">						
@@ -84,6 +82,8 @@
 	</form> 
     
 
+=======
+>>>>>>> f394a8c3b959ad58bc338eb762b991b72c30c7c2
 <div>
 </div>
 
@@ -97,8 +97,15 @@
         ondragstart="return dragStart(event)" id="${item.id }">
         <input type="hidden" name="top" value="${item.thumbnail}" draggable="true"/>
         <input type="hidden" name="id" value="${item.id}" draggable="true"/>
+<<<<<<< HEAD
         <img src="${item.thumbnail }" draggable="false"/>
         
+=======
+        <div >
+        <img class="img-responsive center-block" src="${item.thumbnail }" alt="Your Alt Text" draggable="false" />
+        	
+        </div>
+>>>>>>> f394a8c3b959ad58bc338eb762b991b72c30c7c2
     </div>
     </c:if>
     </c:forEach>
@@ -116,7 +123,7 @@
         <input type="hidden" name="bottom" value="${item.thumbnail}" draggable="true"/>
         <img src="${item.thumbnail }" draggable="false"/>
         </div>
-
+		
     </c:if>
     </c:forEach>
 </div>

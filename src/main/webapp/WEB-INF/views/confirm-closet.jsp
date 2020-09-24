@@ -10,6 +10,7 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
 	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
 	crossorigin="anonymous">
+<<<<<<< HEAD
 	<link rel="stylesheet" href="/style.css">
 <title>Confirm Closet</title>
 </head>
@@ -45,21 +46,35 @@
          </div>
 <div class="uploadbox" >
 
+=======
+	<link rel="stylesheet" href="/closet.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/about.css">
+<title>Confirm Closet</title>
+</head>
+<body class="confirm body">
+>>>>>>> f394a8c3b959ad58bc338eb762b991b72c30c7c2
 	<form action="/closet/add">
 
-	<div class="container" >
+	<div class="container jumbotron confirmer" >
        <input type="hidden" value="${occasion }" name="occasion" />
 
 		<input type="hidden" value="${thumbnail }" name="thumbnail"/>
 		<input type="hidden" value="${title }" name="title"/>
+<<<<<<< HEAD
 		
 		<input type="text" name="title" placeholder="Title of Clothing" >
 		<select name="type" >
+=======
+		<h2>Type of clothing (top, bottom, accessory, etc):</h2>
+		        <select name="type" >
+>>>>>>> f394a8c3b959ad58bc338eb762b991b72c30c7c2
                 <option >Type</option>
                 <option value="tops">Top</option>
 				<option value="bottoms">Bottom</option>
 				<option value="shoes">Shoes</option>
 				<option value="accesories">Accessories</option>
+<<<<<<< HEAD
 				</select> 
 				  <select name="occasion">
 				<option >Occasion</option>
@@ -82,6 +97,14 @@
 		<div>
 	     <br></br>
 		<button>Submit</button>
+=======
+				</select>
+		<h2>Brief description of article:</h2>
+		<textarea name="description"></textarea>
+	     <div>
+		<input type="submit" class="btn-primary" value="confirm"/>
+		<a class="btn-secondary" href="/index">Cancel</a>
+>>>>>>> f394a8c3b959ad58bc338eb762b991b72c30c7c2
 		</div>
 		</div>
 		

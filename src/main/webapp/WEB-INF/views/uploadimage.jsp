@@ -34,7 +34,6 @@
       <li class="nav-item active">
         <a class="nav-link" href="/closet">View Closet</a>
       </li>
-      </li>
      
     </ul>
   </div>
@@ -49,7 +48,6 @@
     <input type="file" name="files[]">
     <input type="submit" value="Upload Files" name="submit">
     <br>
-    </br>
     <p>Remember to fill out a description of your clothing item.</p>
   </form>
 
