@@ -93,7 +93,4 @@ public class SavedCloset {
 				+ shoes + ", title=" + title + "]";
 	}	
 	
-	
-}
-
-	
+}	

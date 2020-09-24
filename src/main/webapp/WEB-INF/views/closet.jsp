@@ -42,7 +42,6 @@
       <li class="nav-item active">
         <a class="nav-link" href="/upload">Upload Clothing</a>
       </li>
-
      
     </ul>
   </div>
@@ -69,17 +68,12 @@
 				<option value="semi formal attire">Semi-Formal</option>
 			</select> <input type="submit" value="sort"/>
 </form>
-		
-
-
-          
-         
+            
    <form action="/closet/name"> 	
    <div id="dropBox" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)"><h3>Create an outfit by moving the items into the box.</h3>						
 	<input type="text" name="title" />
 	<input id="save" type="submit" class="card-link" value="save outfit" /> </div>
 	</form> 
-
 <div>
 </div>
 
@@ -92,6 +86,7 @@
 	<div class="container card cloth1 slide" draggable="true" 
         ondragstart="return dragStart(event)" id="${item.id }">
         <input type="hidden" name="top" value="${item.thumbnail}" draggable="true"/>
+        <input type="hidden" name="id" value="${item.id}" draggable="true"/>
         <div >
         <img class="img-responsive center-block" src="${item.thumbnail }" alt="Your Alt Text" draggable="false" />
         	
