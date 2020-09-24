@@ -62,6 +62,10 @@ public class UserController {
 			Model model, RedirectAttributes redirect) {
 		User user = userDao.findByUsername(username);
 
+		if (user == null) {
+			model.addAttribute("message", "Incorrect username. Please try again.");
+			return "login";
+		}
 		byte[] decodeByte = Base64.getDecoder().decode(user.getPassword());
 		String decodePass = new String(decodeByte);
 

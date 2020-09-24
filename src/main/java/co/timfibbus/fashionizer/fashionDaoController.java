@@ -173,7 +173,7 @@ public class fashionDaoController {
 
 	
 	@RequestMapping("closet/delete")
-	public String deleteItem(@RequestParam(required=false) Long id) {
+	public String deleteItem(@RequestParam Long id) {
 		
 
 		closet.deleteById(id);
