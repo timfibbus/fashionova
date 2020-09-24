@@ -36,6 +36,8 @@
       <li class="nav-item active">
         <a class="nav-link" href="/closet">View Closet</a>
       </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="/logout">Logout</a>
       </li>
      
     </ul>

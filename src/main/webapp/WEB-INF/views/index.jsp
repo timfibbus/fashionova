@@ -36,12 +36,7 @@ pageEncoding="ISO-8859-1"%>
       <li class="nav-item active">
         <a class="nav-link" href="/upload">Upload Clothing</a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/signup">Create an Account</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/login">Login</a>
-      </li>
+      
       <li class="nav-item active">
         <a class="nav-link" href="/logout">Logout</a>
       </li>
@@ -68,10 +63,7 @@ pageEncoding="ISO-8859-1"%>
 	<br>
 </div>
 <div class ="search2">
-<<<<<<< HEAD
-	
-=======
->>>>>>> f394a8c3b959ad58bc338eb762b991b72c30c7c2
+
 	<div class="index">
 		<button type="submit" name="occasion" value="wedding">
 			<img src="images/wedding.jpg" width="300" height="300" />
