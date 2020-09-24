@@ -11,11 +11,31 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
 	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
 	crossorigin="anonymous">
+	<link rel="stylesheet" href="/style.css">
 <link href="style.css" rel="stylesheet" />
 </head>
-<body>
-
-	<h1>Please enter your username and password below:</h1>
+<body class="back">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" >Closet Clue</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+     <li class="nav-item active">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+     
+     
+      
+        
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="login">
+<h1>Login in here to access <br> Closet Clue's Fashionizer:</h1>
+	<h4>Please enter your username and password below:</h4>
 
 	 <p class="message"><c:out value="${message }"/></p>
 
@@ -36,7 +56,7 @@
 	</form>
 
 	<br>
-
+</div>
 
 </body>
 </html>

@@ -97,15 +97,15 @@
         ondragstart="return dragStart(event)" id="${item.id }">
         <input type="hidden" name="top" value="${item.thumbnail}" draggable="true"/>
         <input type="hidden" name="id" value="${item.id}" draggable="true"/>
-<<<<<<< HEAD
+
         <img src="${item.thumbnail }" draggable="false"/>
         
-=======
+
         <div >
         <img class="img-responsive center-block" src="${item.thumbnail }" alt="Your Alt Text" draggable="false" />
         	
         </div>
->>>>>>> f394a8c3b959ad58bc338eb762b991b72c30c7c2
+
     </div>
     </c:if>
     </c:forEach>

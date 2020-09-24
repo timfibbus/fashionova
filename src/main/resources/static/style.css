@@ -252,5 +252,28 @@ label input[type="checkbox"] {
 	background-color: #d4aae3;
 	opacity: 0.9;
 }
-
+.login{
+	width: 50%;
+	height: 400px;
+	background-color: white;
+	padding:10px;
+	margin:10px;
+	text-align: center;
+	margin: auto;
+	position: relative;
+	top: 100px;
 	
+}
+	
+.signup{
+	width: 50%;
+	height: 500px;
+	background-color: white;
+	padding:10px;
+	margin:10px;
+	text-align: center;
+	margin: auto;
+	position: relative;
+	top: 100px;
+	
+}

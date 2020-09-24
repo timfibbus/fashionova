@@ -14,9 +14,24 @@
 <link href="style.css" rel="stylesheet" />
 
 </head>
-<body>
-
-	<h1>Sign up with a username and password below!</h1>
+<body class="back">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" >Closet Clue</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+     <li class="nav-item active">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+        </li>
+    </ul>
+  </div>
+</nav>
+<div class="signup">
+	<h1>Sign-up for Closet Clue's Fashionizer Account.</h1>
+	<h5>Enter a Username and Password below to get started!</h5>
 	
 	<p class="message"><c:out value="${message }"/></p>
 
@@ -42,6 +57,6 @@
 	</form>
 
 	<br>
-
+</div>
 </body>
 </html>
