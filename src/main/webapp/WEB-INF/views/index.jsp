@@ -17,7 +17,9 @@
 </head>
 
 <body class="back">
+
 <%@ include file="header.jsp"%>
+
 <form action="/search-outfit">
 <div class="search1"><h3 >Look through our pre-made occasions icons or <br> enter in the search bar what you're looking for!</h3></center>
 </div>

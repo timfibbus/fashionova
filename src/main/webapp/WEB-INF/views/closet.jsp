@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +13,7 @@
 <link rel="stylesheet" href="/closet.css">
 <link rel="stylesheet" href="/style.css">
 <link rel="stylesheet" href="/about.css">
+
 <meta charset="UTF-8">
 <title>Closet</title>
 
@@ -20,7 +22,9 @@
 </head>
 
 <body class="body">
+
 <%@ include file="header.jsp"%>
+
 
          <div class="header"><h1>Welcome to Your Fashionizer</h1>
          Sort Closet by Category</div>
