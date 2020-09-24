@@ -19,7 +19,7 @@
 
 <body class="back">
 
-<%@ include file="navbar.jsp"%>
+<%@ include file="header.jsp"%>
 
 <div class="signup">
 	<h1>Sign-up for Closet Clue's Fashionizer Account.</h1>

@@ -32,7 +32,7 @@ background-color: white; font-size: 35px;
 </head>
 
 <body class="body">
- <%@ include file="navbar.jsp"%>
+ <%@ include file="header.jsp"%>
     
 
 <div class="jumbotron">

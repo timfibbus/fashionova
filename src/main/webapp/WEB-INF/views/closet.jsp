@@ -20,7 +20,7 @@
 </head>
 
 <body class="body">
-<%@ include file="navbar.jsp"%>
+<%@ include file="header.jsp"%>
 
          <div class="header"><h1>Welcome to Your Fashionizer</h1>
          Sort Closet by Category</div>

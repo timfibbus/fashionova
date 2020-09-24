@@ -18,7 +18,7 @@
 <body>
 
 <body class="back">
-<%@ include file="navbar.jsp"%>
+<%@ include file="header.jsp"%>
 <div class="login">
 <h1>Login in here to access <br> Closet Clue's Fashionizer:</h1>
 	<h4>Please enter your username and password below:</h4>
