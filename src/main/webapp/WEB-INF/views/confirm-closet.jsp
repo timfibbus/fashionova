@@ -32,16 +32,16 @@
 
 		<h2>Type of clothing (top, bottom, accessory, etc):</h2>
 		        <select name="type" >
-                <option >Type</option>
+              <option >Type</option>
                 <option value="tops">Top</option>
-				<option value="bottoms">Bottom</option>
+	           <option value="bottoms">Bottom</option>
 				<option value="shoes">Shoes</option>
 				<option value="accesories">Accessories</option>
 				</select> 
 				  <select name="occasion">
 				<option >Occasion</option>
 				<option value="graduation">Graduation</option>
-				<option value="wedding">Wedding</option>
+                <option value="wedding">Wedding</option>
 				<option value="business casual">Business Casual</option>
 				<option value="barbeque outfit">Barbeque Day</option>
 				<option value="cocktail outfit">Cocktail Party</option>

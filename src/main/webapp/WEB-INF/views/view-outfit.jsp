@@ -29,13 +29,14 @@ height:100%;
 	<c:forEach var="fit" items="${outfit }">
 	<form action="/view/select">
 	<input type="hidden" value="${fit.id }" name="id"/>
-	<input type="submit" value="${fit.title }" class="btn-primary"/>
+	<!--  <input type="submit" value="${fit.title }" class="card-link"/>-->
 	<br>
+	<button>Select</button>
 	</form>
 	</c:forEach>
 	
 	</div>
-		<div class="container float">
+		<div class="container fluid">
 		
 		<img src="${item.top }" />
 		<img src="${item.bottom }" />
